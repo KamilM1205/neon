@@ -1,0 +1,20 @@
+[package]
+name = "neon"
+version = "0.1.0"
+authors = ["KamilM1205 <bigprogrammer1205@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log4rs = "1.0.0"
+log = "0.4.14"
+neon_core = { path = "crates/neon_core"}
+
+[workspace]
+members = [
+    "crates/neon_ui",
+    "crates/neon_plugin",
+    "crates/neon_core",
+    "crates/neon_event"
+]
