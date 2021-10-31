@@ -9,3 +9,4 @@ edition = "2018"
 [dependencies]
 neon_ui = { path = "../neon_ui" }
 neon_plugin = { path = "../neon_plugin" }
+neon_event = { path = "../neon_event" }

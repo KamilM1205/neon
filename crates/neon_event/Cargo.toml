@@ -9,3 +9,4 @@ edition = "2018"
 [dependencies]
 log4rs = "1.0.0"
 log = "0.4.14"
+tui = { version = "0.16.0", features = "crossterm" }
