@@ -35,13 +35,15 @@ impl EventHandler {
                 .checked_sub(last_tick.elapsed())
                 .unwrap_or_else(|| std::time::Duration::from_secs(0));
             if crossterm::event::poll(timeout).unwrap() {
-                let event = crossterm::event::read().unwrap();
-                debug!("Event handled: {:?}", event);
-                match event {
-                    crossterm::event::Event::Key(key) =>
-                        self.tx.send(EventType::Input(key)).unwrap(),
-                    crossterm::event::Event::Resize(w, h) =>
-                        self.tx.send(EventType::Resize(w, h)).unwrap(),
+                match crossterm::event::read().unwrap() {
+                    crossterm::event::Event::Key(key) => {
+                        debug!("Key pressed: {:?}", key);
+                        self.tx.send(EventType::Input(key)).unwrap();
+                    }
+                    crossterm::event::Event::Resize(w, h) => {
+                        debug!("Window resized: {}, {}", w, h);
+                        self.tx.send(EventType::Resize(w, h)).unwrap();
+                    }
                     _ => (),
                 }
             }

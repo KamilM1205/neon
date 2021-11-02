@@ -1,5 +1,5 @@
 use crossterm::{
-    event::{EnableMouseCapture},
+    event::EnableMouseCapture,
     execute,
     terminal::{enable_raw_mode, EnterAlternateScreen},
 };
@@ -23,19 +23,34 @@ impl App {
     }
 
     pub fn run(&mut self) {
+        info!("Starting app");
         let (mut eh, rx) = EventHandler::new();
 
         std::thread::spawn(move || {
             eh.handle_event();
         });
 
-        enable_raw_mode().unwrap();
+        match enable_raw_mode() {
+            Ok(_) => debug!("Enabled raw mode"),
+            Err(_) => panic!("Failed to enable raw mode."),
+        }
 
         let mut stdout = std::io::stdout();
-        execute!(stdout, EnterAlternateScreen, EnableMouseCapture).unwrap();
+
+        match execute!(stdout, EnterAlternateScreen, EnableMouseCapture) {
+            Ok(_) => debug!("Enabled mouse capture and entered to alternate screen"),
+            Err(_) => panic!("Failed to enable mouse capture and entere to alternate screen"),
+        }
+
         let backend = CrosstermBackend::new(stdout);
 
-        let terminal = Terminal::new(backend).unwrap();
+        let terminal = match Terminal::new(backend) {
+            Ok(t) => {
+                debug!("Created terminal");
+                t
+            }
+            Err(_) => panic!("Failed to create terminal"),
+        };
 
         let (mut ui, ui_tx) = UI::new(terminal);
 
@@ -49,13 +64,12 @@ impl App {
                     crossterm::event::KeyCode::Char('q') => {
                         ui_tx.send(UISTATE::Quit).unwrap();
                         break;
-                    },
+                    }
                     _ => (),
                 },
                 EventType::Resize(w, h) => ui_tx.send(UISTATE::Resize(w, h)).unwrap(),
-                EventType::Tick => ui_tx.send(UISTATE::Redraw).unwrap(),
+                EventType::Tick => ui_tx.send(UISTATE::Tick).unwrap(),
             }
         }
-        std::thread::sleep(std::time::Duration::from_secs(1));
     }
 }
