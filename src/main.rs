@@ -11,7 +11,7 @@ use neon_core;
 
 fn main() {
     let logfile = FileAppender::builder()
-        .encoder(Box::new(PatternEncoder::new("{d}:{l} - {m}")))
+        .encoder(Box::new(PatternEncoder::new("{d}:{l} - {m}\n")))
         .build("log/log.log").unwrap();
     let config = Config::builder()
         .appender(Appender::builder().build("logfile", Box::new(logfile)))
