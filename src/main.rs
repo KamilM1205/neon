@@ -8,6 +8,7 @@ use log4rs::encode::pattern::PatternEncoder;
 use log4rs::config::{Appender, Config, Root};
 
 mod app;
+mod ui;
 
 fn main() {
     let logfile = FileAppender::builder()

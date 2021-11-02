@@ -1,6 +1,7 @@
 #[derive(Debug)]
 pub enum EventType {
     Input(crossterm::event::KeyEvent),
+    Resize(u16, u16),
     Tick,
 }
 
@@ -34,9 +35,14 @@ impl EventHandler {
                 .checked_sub(last_tick.elapsed())
                 .unwrap_or_else(|| std::time::Duration::from_secs(0));
             if crossterm::event::poll(timeout).unwrap() {
-                if let crossterm::event::Event::Key(key) = crossterm::event::read().unwrap() {
-                    self.tx.send(EventType::Input(key)).unwrap();
-                    debug!("Event handled: {:?}", key);
+                let event = crossterm::event::read().unwrap();
+                debug!("Event handled: {:?}", event);
+                match event {
+                    crossterm::event::Event::Key(key) =>
+                        self.tx.send(EventType::Input(key)).unwrap(),
+                    crossterm::event::Event::Resize(w, h) =>
+                        self.tx.send(EventType::Resize(w, h)).unwrap(),
+                    _ => (),
                 }
             }
             if last_tick.elapsed() >= self.tick_rate {

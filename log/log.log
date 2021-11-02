@@ -201,3 +201,62 @@
 2021-11-02T14:20:58.443138738+03:00:DEBUG - Event handled: KeyEvent { code: Char('q'), modifiers: NONE }
 2021-11-02T14:20:58.443692906+03:00:DEBUG - Exit
 2021-11-02T14:20:58.443924909+03:00:INFO - Goodbye!
+2021-11-02T16:56:54.312562396+03:00:INFO - Welcome to the neon! :)
+2021-11-02T16:56:54.314108408+03:00:DEBUG - Initializing 
+2021-11-02T16:56:54.316558968+03:00:DEBUG - Starting handling events
+2021-11-02T16:56:57.418827777+03:00:INFO - Goodbye!
+2021-11-02T16:58:59.262466106+03:00:INFO - Welcome to the neon! :)
+2021-11-02T16:58:59.262789598+03:00:DEBUG - Initializing 
+2021-11-02T16:58:59.266010196+03:00:DEBUG - Starting handling events
+2021-11-02T16:59:19.884430741+03:00:DEBUG - Event handled: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-02T16:59:19.884813107+03:00:INFO - Goodbye!
+2021-11-02T17:25:30.760167255+03:00:INFO - Welcome to the neon! :)
+2021-11-02T17:25:30.774897223+03:00:DEBUG - Initializing 
+2021-11-02T17:25:30.779085502+03:00:DEBUG - Starting handling events
+2021-11-02T17:25:35.102573199+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 94, row: 0, modifiers: NONE })
+2021-11-02T17:25:35.118258277+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 90, row: 1, modifiers: NONE })
+2021-11-02T17:25:35.133884131+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 85, row: 1, modifiers: NONE })
+2021-11-02T17:25:35.151043847+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 83, row: 2, modifiers: NONE })
+2021-11-02T17:25:35.168441362+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 82, row: 2, modifiers: NONE })
+2021-11-02T17:25:35.183972167+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 80, row: 2, modifiers: NONE })
+2021-11-02T17:25:35.402370762+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 79, row: 3, modifiers: NONE })
+2021-11-02T17:25:35.435395598+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 78, row: 4, modifiers: NONE })
+2021-11-02T17:25:35.451783529+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 77, row: 4, modifiers: NONE })
+2021-11-02T17:25:35.468031505+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 76, row: 5, modifiers: NONE })
+2021-11-02T17:25:35.485092399+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 75, row: 5, modifiers: NONE })
+2021-11-02T17:25:35.698356265+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 75, row: 4, modifiers: NONE })
+2021-11-02T17:25:35.711069927+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 75, row: 3, modifiers: NONE })
+2021-11-02T17:25:35.722815211+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 75, row: 2, modifiers: NONE })
+2021-11-02T17:25:35.736167127+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 74, row: 2, modifiers: NONE })
+2021-11-02T17:25:35.752192178+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 74, row: 1, modifiers: NONE })
+2021-11-02T17:25:35.770184158+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 74, row: 0, modifiers: NONE })
+2021-11-02T17:25:38.614309264+03:00:DEBUG - Event handled: Resize(124, 10)
+2021-11-02T17:25:56.153024254+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 51, row: 0, modifiers: NONE })
+2021-11-02T17:25:56.471546192+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 51, row: 1, modifiers: NONE })
+2021-11-02T17:25:56.505108365+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 50, row: 2, modifiers: NONE })
+2021-11-02T17:25:56.810841284+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Down(Left), column: 50, row: 2, modifiers: NONE })
+2021-11-02T17:25:56.977248607+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Up(Left), column: 50, row: 2, modifiers: NONE })
+2021-11-02T17:25:57.707776777+03:00:DEBUG - Event handled: Key(KeyEvent { code: Char('q'), modifiers: NONE })
+2021-11-02T17:25:57.708139587+03:00:INFO - Goodbye!
+2021-11-02T17:28:41.351457691+03:00:INFO - Welcome to the neon! :)
+2021-11-02T17:28:41.353357994+03:00:DEBUG - Initializing 
+2021-11-02T17:28:41.357529442+03:00:DEBUG - Starting handling events
+2021-11-02T17:28:45.412632892+03:00:DEBUG - Event handled: Key(KeyEvent { code: Char(' '), modifiers: NONE })
+2021-11-02T17:28:45.778017728+03:00:DEBUG - Event handled: Key(KeyEvent { code: Char('v'), modifiers: NONE })
+2021-11-02T17:28:47.940804438+03:00:DEBUG - Event handled: Resize(124, 13)
+2021-11-02T17:28:48.605529744+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 51, row: 0, modifiers: NONE })
+2021-11-02T17:28:48.676146359+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 54, row: 3, modifiers: NONE })
+2021-11-02T17:28:48.805523753+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Moved, column: 54, row: 4, modifiers: NONE })
+2021-11-02T17:28:48.941014871+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Down(Left), column: 54, row: 4, modifiers: NONE })
+2021-11-02T17:28:49.137802740+03:00:DEBUG - Event handled: Mouse(MouseEvent { kind: Up(Left), column: 54, row: 4, modifiers: NONE })
+2021-11-02T17:28:49.347019400+03:00:DEBUG - Event handled: Key(KeyEvent { code: Char('f'), modifiers: NONE })
+2021-11-02T17:28:49.650903976+03:00:DEBUG - Event handled: Key(KeyEvent { code: Char('f'), modifiers: NONE })
+2021-11-02T17:28:49.709157867+03:00:DEBUG - Event handled: Key(KeyEvent { code: Char(' '), modifiers: NONE })
+2021-11-02T17:28:49.806507088+03:00:DEBUG - Event handled: Key(KeyEvent { code: Char('g'), modifiers: NONE })
+2021-11-02T17:28:49.905992527+03:00:DEBUG - Event handled: Key(KeyEvent { code: Char('e'), modifiers: NONE })
+2021-11-02T17:28:50.006132491+03:00:DEBUG - Event handled: Key(KeyEvent { code: Char('g'), modifiers: NONE })
+2021-11-02T17:28:50.016327641+03:00:DEBUG - Event handled: Key(KeyEvent { code: Char('h'), modifiers: NONE })
+2021-11-02T17:28:50.166210499+03:00:DEBUG - Event handled: Key(KeyEvent { code: Char('k'), modifiers: NONE })
+2021-11-02T17:28:50.185945366+03:00:DEBUG - Event handled: Key(KeyEvent { code: Char('j'), modifiers: NONE })
+2021-11-02T17:28:51.721471655+03:00:DEBUG - Event handled: Key(KeyEvent { code: Char('q'), modifiers: NONE })
+2021-11-02T17:28:52.722339826+03:00:INFO - Goodbye!

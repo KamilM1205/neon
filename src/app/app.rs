@@ -1,28 +1,24 @@
 use crossterm::{
-    event::{DisableMouseCapture, EnableMouseCapture},
+    event::{EnableMouseCapture},
     execute,
-    terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
+    terminal::{enable_raw_mode, EnterAlternateScreen},
 };
 
 use tui::{backend::CrosstermBackend, Terminal};
 
 use crate::app::event::{EventHandler, EventType};
+use crate::app::state::AppState;
+
+use crate::ui::ui::{UI, UISTATE};
 
 pub struct App {
-    terminal: Terminal<CrosstermBackend<std::io::Stdout>>,
+    state: AppState,
 }
 
 impl App {
     pub fn new() -> Self {
-        enable_raw_mode().unwrap();
-
-        let mut stdout = std::io::stdout();
-        execute!(stdout, EnterAlternateScreen, EnableMouseCapture).unwrap();
-        let backend = CrosstermBackend::new(stdout);
-        let terminal = Terminal::new(backend).unwrap();
-
         Self {
-            terminal,
+            state: AppState::Buffer(0),
         }
     }
 
@@ -33,23 +29,33 @@ impl App {
             eh.handle_event();
         });
 
+        enable_raw_mode().unwrap();
+
+        let mut stdout = std::io::stdout();
+        execute!(stdout, EnterAlternateScreen, EnableMouseCapture).unwrap();
+        let backend = CrosstermBackend::new(stdout);
+
+        let terminal = Terminal::new(backend).unwrap();
+
+        let (mut ui, ui_tx) = UI::new(terminal);
+
+        std::thread::spawn(move || {
+            ui.draw();
+        });
+
         loop {
             match rx.recv().unwrap() {
                 EventType::Input(key) => match key.code {
                     crossterm::event::KeyCode::Char('q') => {
-                        disable_raw_mode().unwrap();
-                        execute!(
-                            self.terminal.backend_mut(),
-                            LeaveAlternateScreen,
-                            DisableMouseCapture
-                        ).unwrap();
-                        self.terminal.show_cursor().unwrap();
+                        ui_tx.send(UISTATE::Quit).unwrap();
                         break;
                     },
                     _ => (),
                 },
-                EventType::Tick => (),
+                EventType::Resize(w, h) => ui_tx.send(UISTATE::Resize(w, h)).unwrap(),
+                EventType::Tick => ui_tx.send(UISTATE::Redraw).unwrap(),
             }
         }
+        std::thread::sleep(std::time::Duration::from_secs(1));
     }
 }
