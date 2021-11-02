@@ -7,7 +7,7 @@ use log4rs::append::file::FileAppender;
 use log4rs::encode::pattern::PatternEncoder;
 use log4rs::config::{Appender, Config, Root};
 
-use neon_core;
+mod app;
 
 fn main() {
     let logfile = FileAppender::builder()
@@ -17,13 +17,13 @@ fn main() {
         .appender(Appender::builder().build("logfile", Box::new(logfile)))
         .build(Root::builder()
                 .appender("logfile")
-                .build(LevelFilter::Info)).unwrap();
+                .build(LevelFilter::Debug)).unwrap();
     log4rs::init_config(config).unwrap();
 
     info!("Welcome to the neon! :)");
 
-    let mut core = neon_core::core::Core::new();
-    core.run();
-
+    let mut app = app::app::App::new();
+    app.run();
+    
     info!("Goodbye!");
 }

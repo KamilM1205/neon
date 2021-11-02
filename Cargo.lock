@@ -241,37 +241,11 @@ dependencies = [
 name = "neon"
 version = "0.1.0"
 dependencies = [
- "log",
- "log4rs",
- "neon_core",
-]
-
-[[package]]
-name = "neon_core"
-version = "0.1.0"
-dependencies = [
- "neon_event",
- "neon_plugin",
- "neon_ui",
-]
-
-[[package]]
-name = "neon_event"
-version = "0.1.0"
-dependencies = [
  "crossterm",
  "log",
  "log4rs",
  "tui",
 ]
-
-[[package]]
-name = "neon_plugin"
-version = "0.1.0"
-
-[[package]]
-name = "neon_ui"
-version = "0.1.0"
 
 [[package]]
 name = "ntapi"
