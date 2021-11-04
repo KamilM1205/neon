@@ -1,17 +1,16 @@
 use tui::{
     backend::Backend,
-    widgets::{Block, Borders},
-    layout::{Rect, Layout, Direction, Constraint},
-    Terminal, Frame
+    layout::{Constraint, Direction, Layout, Rect},
+    Frame, Terminal,
 };
 
 use crossterm::{
     event::DisableMouseCapture,
     execute,
-    terminal::{disable_raw_mode, LeaveAlternateScreen}
+    terminal::{disable_raw_mode, LeaveAlternateScreen},
 };
 
-use crate::ui::file_tree::file_tree::{FileTree, ElemType};
+use crate::ui::file_tree::file_tree::FileTree;
 
 pub enum UISTATE {
     Redraw,
@@ -28,19 +27,11 @@ pub struct UI {
 fn draw_ui<B: Backend>(f: &mut Frame<B>) {
     let chunks = Layout::default()
         .direction(Direction::Vertical)
-        .constraints(
-            [
-                Constraint::Percentage(10),
-                Constraint::Percentage(40),
-                Constraint::Percentage(10),
-            ]
-            .as_ref(),
-        )
+        .constraints([Constraint::Percentage(60)].as_ref())
         .split(f.size());
-    let block = Block::default().title("Block").borders(Borders::ALL);
-    f.render_widget(block, chunks[0]);
-    let block = Block::default().title("Block 2").borders(Borders::ALL);
-    f.render_widget(block, chunks[2]);
+    let mut fmanager = FileTree::new();
+    let mut state = fmanager.get_state();
+    f.render_stateful_widget(fmanager.get_widget(), chunks[0], &mut state);
 }
 
 fn update_ui_data(ui: &mut UI) {}
@@ -55,6 +46,11 @@ impl UI {
 
     pub fn draw(&mut self) {
         let mut size = Rect::default();
+        self.terminal
+            .draw(|f| {
+                draw_ui(f);
+            })
+            .unwrap();
         loop {
             match self.rx.recv().unwrap() {
                 UISTATE::Redraw => {
@@ -63,19 +59,28 @@ impl UI {
                             draw_ui(f);
                         })
                         .unwrap();
-                },
-                UISTATE::Resize(w, h) => size = Rect::new(0, 0, w, h),
+                }
+                UISTATE::Resize(w, h) => {
+                    size = Rect::new(0, 0, w, h);
+                    self.terminal
+                        .draw(|f| {
+                            draw_ui(f);
+                        })
+                        .unwrap();
+                }
                 UISTATE::Tick => update_ui_data(self),
                 UISTATE::Quit => {
+                    info!("Quit");
                     disable_raw_mode().unwrap();
                     execute!(
                         self.terminal.backend_mut(),
                         LeaveAlternateScreen,
                         DisableMouseCapture
-                    ).unwrap();
+                    )
+                    .unwrap();
                     self.terminal.show_cursor().unwrap();
-                    break
-                },
+                    break;
+                }
             }
         }
     }

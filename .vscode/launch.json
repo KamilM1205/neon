@@ -7,13 +7,13 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in library 'neon_ui'",
+            "name": "Debug unit tests in library 'neon'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
                     "--lib",
-                    "--package=neon_ui"
+                    "--package=neon"
                 ],
                 "filter": {
                     "name": "neon_ui",

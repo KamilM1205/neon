@@ -1,65 +1,257 @@
-2021-11-02T23:06:12.539693190+03:00:INFO - Welcome to the neon! :)
-2021-11-02T23:06:12.539820755+03:00:INFO - Starting app
-2021-11-02T23:06:12.539852016+03:00:DEBUG - Initializing 
-2021-11-02T23:06:12.539969867+03:00:DEBUG - Enabled raw mode
-2021-11-02T23:06:12.540017925+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-02T23:06:12.540188903+03:00:DEBUG - Created terminal
-2021-11-02T23:06:12.540311101+03:00:DEBUG - Starting handling events
-2021-11-02T23:06:18.230675021+03:00:DEBUG - Key pressed: KeyEvent { code: Char('n'), modifiers: NONE }
-2021-11-02T23:06:19.831379531+03:00:DEBUG - Key pressed: KeyEvent { code: Char('m'), modifiers: NONE }
-2021-11-02T23:06:20.006417752+03:00:DEBUG - Key pressed: KeyEvent { code: Char('b'), modifiers: NONE }
-2021-11-02T23:06:20.430542375+03:00:DEBUG - Key pressed: KeyEvent { code: Char('m'), modifiers: NONE }
-2021-11-02T23:06:21.014739428+03:00:DEBUG - Key pressed: KeyEvent { code: Char('j'), modifiers: NONE }
-2021-11-02T23:06:21.390455399+03:00:DEBUG - Key pressed: KeyEvent { code: Char(','), modifiers: NONE }
-2021-11-02T23:06:26.138658626+03:00:DEBUG - Window resized: 142, 9
-2021-11-02T23:06:28.988121568+03:00:DEBUG - Window resized: 142, 12
-2021-11-02T23:06:29.895507440+03:00:DEBUG - Window resized: 142, 9
-2021-11-02T23:06:30.798081266+03:00:DEBUG - Window resized: 142, 12
-2021-11-02T23:06:32.165985889+03:00:DEBUG - Window resized: 142, 7
-2021-11-02T23:06:36.988583075+03:00:DEBUG - Window resized: 142, 19
-2021-11-02T23:06:42.794647166+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
-2021-11-02T23:06:43.795216010+03:00:INFO - Goodbye!
-2021-11-02T23:18:39.310867247+03:00:INFO - Welcome to the neon! :)
-2021-11-02T23:18:39.310991545+03:00:INFO - Starting app
-2021-11-02T23:18:39.311028797+03:00:DEBUG - Initializing 
-2021-11-02T23:18:39.311160805+03:00:DEBUG - Enabled raw mode
-2021-11-02T23:18:39.311216661+03:00:DEBUG - Starting handling events
-2021-11-02T23:18:39.311273536+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-02T23:18:39.311668420+03:00:DEBUG - Created terminal
-2021-11-02T23:20:06.519449728+03:00:INFO - Welcome to the neon! :)
-2021-11-02T23:20:06.519569629+03:00:INFO - Starting app
-2021-11-02T23:20:06.519599676+03:00:DEBUG - Initializing 
-2021-11-02T23:20:06.519723762+03:00:DEBUG - Enabled raw mode
-2021-11-02T23:20:06.519775211+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-02T23:20:06.520151128+03:00:DEBUG - Created terminal
-2021-11-02T23:20:06.520278920+03:00:DEBUG - Starting handling events
-2021-11-02T23:20:11.439423783+03:00:DEBUG - Window resized: 142, 39
-2021-11-02T23:20:15.539870180+03:00:DEBUG - Window resized: 142, 31
-2021-11-02T23:20:15.990836817+03:00:DEBUG - Window resized: 142, 20
-2021-11-02T23:20:26.454642279+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
-2021-11-02T23:20:27.455015584+03:00:INFO - Goodbye!
-2021-11-02T23:20:31.111334944+03:00:INFO - Welcome to the neon! :)
-2021-11-02T23:20:31.111443315+03:00:INFO - Starting app
-2021-11-02T23:20:31.111474105+03:00:DEBUG - Initializing 
-2021-11-02T23:20:31.111590888+03:00:DEBUG - Enabled raw mode
-2021-11-02T23:20:31.111624222+03:00:DEBUG - Starting handling events
-2021-11-02T23:20:31.111676842+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-02T23:20:31.112305416+03:00:DEBUG - Created terminal
-2021-11-02T23:20:34.118350937+03:00:DEBUG - Window resized: 142, 28
-2021-11-02T23:20:37.558340143+03:00:DEBUG - Window resized: 142, 29
-2021-11-02T23:20:38.173871142+03:00:DEBUG - Window resized: 142, 25
-2021-11-02T23:20:38.350809995+03:00:DEBUG - Window resized: 142, 23
-2021-11-02T23:20:40.886694360+03:00:DEBUG - Key pressed: KeyEvent { code: Char('2'), modifiers: NONE }
-2021-11-02T23:20:41.380237163+03:00:DEBUG - Key pressed: KeyEvent { code: Char('1'), modifiers: NONE }
-2021-11-02T23:20:43.388580579+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
-2021-11-02T23:20:44.388866381+03:00:INFO - Goodbye!
-2021-11-02T23:21:38.701162729+03:00:INFO - Welcome to the neon! :)
-2021-11-02T23:21:38.701299674+03:00:INFO - Starting app
-2021-11-02T23:21:38.701331051+03:00:DEBUG - Initializing 
-2021-11-02T23:21:38.701437788+03:00:DEBUG - Enabled raw mode
-2021-11-02T23:21:38.701484165+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-02T23:21:38.702210253+03:00:DEBUG - Created terminal
-2021-11-02T23:21:38.702371918+03:00:DEBUG - Starting handling events
-2021-11-02T23:21:42.548279833+03:00:DEBUG - Key pressed: KeyEvent { code: Char('1'), modifiers: NONE }
-2021-11-02T23:21:45.060230124+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
-2021-11-02T23:21:45.060456080+03:00:INFO - Goodbye!
+2021-11-04T13:03:24.491715982+03:00:INFO - Welcome to the neon! :)
+2021-11-04T13:03:24.491843716+03:00:INFO - Starting app
+2021-11-04T13:03:24.491876338+03:00:DEBUG - Initializing 
+2021-11-04T13:03:24.492752463+03:00:DEBUG - Enabled raw mode
+2021-11-04T13:03:24.492799887+03:00:DEBUG - Starting handling events
+2021-11-04T13:03:24.492858624+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T13:03:24.493964724+03:00:DEBUG - Created terminal
+2021-11-04T13:03:35.172743451+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:03:39.457443676+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:03:40.856827173+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:04:53.358361953+03:00:INFO - Welcome to the neon! :)
+2021-11-04T13:04:53.358915802+03:00:INFO - Starting app
+2021-11-04T13:04:53.358967056+03:00:DEBUG - Initializing 
+2021-11-04T13:04:53.359377367+03:00:DEBUG - Enabled raw mode
+2021-11-04T13:04:53.359578989+03:00:DEBUG - Starting handling events
+2021-11-04T13:04:53.359998310+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T13:04:53.360629238+03:00:DEBUG - Created terminal
+2021-11-04T13:05:00.259874312+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:05:01.646735505+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:06:19.415336396+03:00:INFO - Welcome to the neon! :)
+2021-11-04T13:06:19.415455084+03:00:INFO - Starting app
+2021-11-04T13:06:19.415488411+03:00:DEBUG - Initializing 
+2021-11-04T13:06:19.415716334+03:00:DEBUG - Enabled raw mode
+2021-11-04T13:06:19.415765741+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T13:06:19.416277246+03:00:DEBUG - Starting handling events
+2021-11-04T13:06:19.416386471+03:00:DEBUG - Created terminal
+2021-11-04T13:06:43.950647905+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:06:45.316576345+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:20:17.653509501+03:00:INFO - Welcome to the neon! :)
+2021-11-04T13:20:17.653976749+03:00:INFO - Starting app
+2021-11-04T13:20:17.654019971+03:00:DEBUG - Initializing 
+2021-11-04T13:20:17.654305085+03:00:DEBUG - Enabled raw mode
+2021-11-04T13:20:17.654349806+03:00:DEBUG - Starting handling events
+2021-11-04T13:20:17.654395551+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T13:20:17.654622525+03:00:DEBUG - Created terminal
+2021-11-04T13:20:21.924543692+03:00:DEBUG - Key pressed: KeyEvent { code: Char('й'), modifiers: NONE }
+2021-11-04T13:20:24.524172374+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:20:29.923775470+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:20:35.394920693+03:00:DEBUG - Key pressed: KeyEvent { code: Char('f'), modifiers: NONE }
+2021-11-04T13:20:35.875805715+03:00:DEBUG - Key pressed: KeyEvent { code: Char('d'), modifiers: NONE }
+2021-11-04T13:21:36.655650281+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:21:37.954990950+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:21:41.066548692+03:00:INFO - Welcome to the neon! :)
+2021-11-04T13:21:41.066651281+03:00:INFO - Starting app
+2021-11-04T13:21:41.066686246+03:00:DEBUG - Initializing 
+2021-11-04T13:21:41.066920160+03:00:DEBUG - Enabled raw mode
+2021-11-04T13:21:41.066959518+03:00:DEBUG - Starting handling events
+2021-11-04T13:21:41.067191665+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T13:21:41.067595196+03:00:DEBUG - Created terminal
+2021-11-04T13:21:43.294838913+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:21:44.031320629+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:21:44.543250621+03:00:DEBUG - Key pressed: KeyEvent { code: Char('d'), modifiers: NONE }
+2021-11-04T13:21:44.847341745+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:21:45.295351418+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:21:45.831300089+03:00:DEBUG - Key pressed: KeyEvent { code: Char('d'), modifiers: NONE }
+2021-11-04T13:21:46.103308432+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:21:46.399083071+03:00:DEBUG - Key pressed: KeyEvent { code: Char('d'), modifiers: NONE }
+2021-11-04T13:21:46.623069517+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:21:47.127147447+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:21:47.583317893+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:21:47.991435770+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:21:48.367267414+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:21:48.567124980+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:21:57.861104921+03:00:INFO - Welcome to the neon! :)
+2021-11-04T13:21:57.861209611+03:00:INFO - Starting app
+2021-11-04T13:21:57.861242705+03:00:DEBUG - Initializing 
+2021-11-04T13:21:57.861525517+03:00:DEBUG - Enabled raw mode
+2021-11-04T13:21:57.861567689+03:00:DEBUG - Starting handling events
+2021-11-04T13:21:57.861630033+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T13:21:57.862161625+03:00:DEBUG - Created terminal
+2021-11-04T13:21:59.574389396+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:22:00.142529376+03:00:DEBUG - Key pressed: KeyEvent { code: Char('w'), modifiers: NONE }
+2021-11-04T13:22:00.622453167+03:00:DEBUG - Key pressed: KeyEvent { code: Char('d'), modifiers: NONE }
+2021-11-04T13:22:00.894070731+03:00:DEBUG - Key pressed: KeyEvent { code: Char('f'), modifiers: NONE }
+2021-11-04T13:22:01.182192882+03:00:DEBUG - Key pressed: KeyEvent { code: Char('d'), modifiers: NONE }
+2021-11-04T13:22:01.630477836+03:00:DEBUG - Key pressed: KeyEvent { code: Char('s'), modifiers: NONE }
+2021-11-04T13:22:01.990418320+03:00:DEBUG - Key pressed: KeyEvent { code: Char('d'), modifiers: NONE }
+2021-11-04T13:22:02.198362294+03:00:DEBUG - Key pressed: KeyEvent { code: Char('f'), modifiers: NONE }
+2021-11-04T13:22:34.257987454+03:00:INFO - Welcome to the neon! :)
+2021-11-04T13:22:34.258105660+03:00:INFO - Starting app
+2021-11-04T13:22:34.258137563+03:00:DEBUG - Initializing 
+2021-11-04T13:22:34.258416616+03:00:DEBUG - Enabled raw mode
+2021-11-04T13:22:34.258457900+03:00:DEBUG - Starting handling events
+2021-11-04T13:22:34.258811970+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T13:22:34.259216810+03:00:DEBUG - Created terminal
+2021-11-04T13:24:37.017583014+03:00:INFO - Welcome to the neon! :)
+2021-11-04T13:24:37.017697988+03:00:INFO - Starting app
+2021-11-04T13:24:37.017729281+03:00:DEBUG - Initializing 
+2021-11-04T13:24:37.017848199+03:00:DEBUG - Enabled raw mode
+2021-11-04T13:24:37.017896298+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T13:24:37.018228270+03:00:DEBUG - Created terminal
+2021-11-04T13:24:37.018345205+03:00:DEBUG - Starting handling events
+2021-11-04T13:24:37.268494372+03:00:DEBUG - Tick
+2021-11-04T13:24:37.768555915+03:00:DEBUG - Tick
+2021-11-04T13:24:38.268616274+03:00:DEBUG - Tick
+2021-11-04T13:24:38.768681955+03:00:DEBUG - Tick
+2021-11-04T13:24:39.268742143+03:00:DEBUG - Tick
+2021-11-04T13:24:39.768779070+03:00:DEBUG - Tick
+2021-11-04T13:24:40.268831024+03:00:DEBUG - Tick
+2021-11-04T13:24:40.768864814+03:00:DEBUG - Tick
+2021-11-04T13:24:41.268902312+03:00:DEBUG - Tick
+2021-11-04T13:24:41.768971990+03:00:DEBUG - Tick
+2021-11-04T13:24:42.269022517+03:00:DEBUG - Tick
+2021-11-04T13:24:42.769078062+03:00:DEBUG - Tick
+2021-11-04T13:24:43.269135812+03:00:DEBUG - Tick
+2021-11-04T13:24:43.769195504+03:00:DEBUG - Tick
+2021-11-04T13:24:44.269252721+03:00:DEBUG - Tick
+2021-11-04T13:24:44.769298304+03:00:DEBUG - Tick
+2021-11-04T13:24:45.269359596+03:00:DEBUG - Tick
+2021-11-04T13:24:45.439302721+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:24:45.439513437+03:00:INFO - Goodbye!
+2021-11-04T13:26:00.263774885+03:00:INFO - Welcome to the neon! :)
+2021-11-04T13:26:00.263877975+03:00:INFO - Starting app
+2021-11-04T13:26:00.263908278+03:00:DEBUG - Initializing 
+2021-11-04T13:26:00.264027343+03:00:DEBUG - Enabled raw mode
+2021-11-04T13:26:00.264083266+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T13:26:00.264418077+03:00:DEBUG - Created terminal
+2021-11-04T13:26:00.266336035+03:00:DEBUG - Starting handling events
+2021-11-04T13:26:04.596807849+03:00:DEBUG - Window resized: 104, 15
+2021-11-04T13:26:07.060868415+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T13:26:07.276282394+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
+2021-11-04T13:26:10.156365170+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T13:26:12.334527256+03:00:DEBUG - Window resized: 104, 25
+2021-11-04T13:26:14.092987723+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T13:26:14.476321597+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
+2021-11-04T13:26:14.676391013+03:00:DEBUG - Key pressed: KeyEvent { code: Right, modifiers: NONE }
+2021-11-04T13:26:15.859910702+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:26:15.860214297+03:00:INFO - Quit
+2021-11-04T13:26:15.910256242+03:00:INFO - Goodbye!
+2021-11-04T13:26:41.446194108+03:00:INFO - Welcome to the neon! :)
+2021-11-04T13:26:41.446306444+03:00:INFO - Starting app
+2021-11-04T13:26:41.446337156+03:00:DEBUG - Initializing 
+2021-11-04T13:26:41.446449422+03:00:DEBUG - Enabled raw mode
+2021-11-04T13:26:41.446482141+03:00:DEBUG - Starting handling events
+2021-11-04T13:26:41.446533161+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T13:26:41.447164436+03:00:DEBUG - Created terminal
+2021-11-04T13:26:45.187492456+03:00:DEBUG - Window resized: 104, 21
+2021-11-04T13:26:47.648523842+03:00:DEBUG - Window resized: 104, 25
+2021-11-04T13:26:49.402944074+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:26:50.131349001+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:26:50.539149407+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:37:49.132161341+03:00:INFO - Welcome to the neon! :)
+2021-11-04T13:37:49.132287607+03:00:INFO - Starting app
+2021-11-04T13:37:49.132327849+03:00:DEBUG - Initializing 
+2021-11-04T13:37:49.132459697+03:00:DEBUG - Enabled raw mode
+2021-11-04T13:37:49.132512496+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T13:37:49.132955684+03:00:DEBUG - Created terminal
+2021-11-04T13:37:49.133089996+03:00:DEBUG - Starting handling events
+2021-11-04T13:37:52.661024782+03:00:DEBUG - Window resized: 163, 14
+2021-11-04T13:37:52.857533586+03:00:DEBUG - Window resized: 163, 15
+2021-11-04T13:37:55.802701644+03:00:DEBUG - Window resized: 163, 29
+2021-11-04T13:38:03.339037086+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T13:38:03.882832498+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T13:38:04.009953104+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
+2021-11-04T13:38:04.354775975+03:00:DEBUG - Key pressed: KeyEvent { code: Left, modifiers: NONE }
+2021-11-04T13:38:04.681983143+03:00:DEBUG - Key pressed: KeyEvent { code: Right, modifiers: NONE }
+2021-11-04T13:38:05.330812963+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T13:38:06.602766084+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:38:06.603047230+03:00:INFO - Quit
+2021-11-04T13:38:06.604937827+03:00:INFO - Goodbye!
+2021-11-04T13:59:19.112464219+03:00:INFO - Welcome to the neon! :)
+2021-11-04T13:59:19.112588984+03:00:INFO - Starting app
+2021-11-04T13:59:19.112620953+03:00:DEBUG - Initializing 
+2021-11-04T13:59:19.112732736+03:00:DEBUG - Enabled raw mode
+2021-11-04T13:59:19.112780518+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T13:59:19.112807344+03:00:DEBUG - Starting handling events
+2021-11-04T13:59:19.113150495+03:00:DEBUG - Created terminal
+2021-11-04T13:59:21.134807793+03:00:DEBUG - Window resized: 163, 15
+2021-11-04T13:59:28.498908603+03:00:DEBUG - Window resized: 163, 32
+2021-11-04T13:59:31.494624669+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T13:59:31.495075827+03:00:INFO - Quit
+2021-11-04T13:59:31.496517842+03:00:INFO - Goodbye!
+2021-11-04T14:03:01.473256152+03:00:INFO - Welcome to the neon! :)
+2021-11-04T14:03:01.473365039+03:00:INFO - Starting app
+2021-11-04T14:03:01.473395975+03:00:DEBUG - Initializing 
+2021-11-04T14:03:01.473500672+03:00:DEBUG - Enabled raw mode
+2021-11-04T14:03:01.473639648+03:00:DEBUG - Starting handling events
+2021-11-04T14:03:01.474119858+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T14:03:01.474663733+03:00:DEBUG - Created terminal
+2021-11-04T14:03:06.426693218+03:00:DEBUG - Window resized: 163, 22
+2021-11-04T14:03:13.099246061+03:00:DEBUG - Window resized: 163, 37
+2021-11-04T14:03:16.115560252+03:00:DEBUG - Window resized: 163, 13
+2021-11-04T14:03:16.458182373+03:00:DEBUG - Window resized: 163, 14
+2021-11-04T14:03:17.159965569+03:00:DEBUG - Window resized: 163, 21
+2021-11-04T14:03:19.592937501+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T14:03:19.593194936+03:00:INFO - Quit
+2021-11-04T14:03:19.594669751+03:00:INFO - Goodbye!
+2021-11-04T14:03:36.030065816+03:00:INFO - Welcome to the neon! :)
+2021-11-04T14:03:36.030169091+03:00:INFO - Starting app
+2021-11-04T14:03:36.030201111+03:00:DEBUG - Initializing 
+2021-11-04T14:03:36.030358886+03:00:DEBUG - Starting handling events
+2021-11-04T14:03:36.030488820+03:00:DEBUG - Enabled raw mode
+2021-11-04T14:03:36.030564942+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T14:03:36.031023877+03:00:DEBUG - Created terminal
+2021-11-04T14:03:37.783836844+03:00:DEBUG - Window resized: 198, 47
+2021-11-04T14:03:39.444026515+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T14:03:39.771945314+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
+2021-11-04T14:03:40.059766708+03:00:DEBUG - Key pressed: KeyEvent { code: Left, modifiers: NONE }
+2021-11-04T14:03:40.307922353+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T14:03:40.371909844+03:00:DEBUG - Key pressed: KeyEvent { code: Right, modifiers: NONE }
+2021-11-04T14:03:41.235953623+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T14:03:41.236186622+03:00:INFO - Quit
+2021-11-04T14:03:41.239588004+03:00:INFO - Goodbye!
+2021-11-04T14:12:07.901965963+03:00:INFO - Welcome to the neon! :)
+2021-11-04T14:12:07.902066569+03:00:INFO - Starting app
+2021-11-04T14:12:07.902097400+03:00:DEBUG - Initializing 
+2021-11-04T14:12:07.902205160+03:00:DEBUG - Enabled raw mode
+2021-11-04T14:12:07.902234300+03:00:DEBUG - Starting handling events
+2021-11-04T14:12:07.902285625+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T14:12:07.902833808+03:00:DEBUG - Created terminal
+2021-11-04T14:12:13.693746233+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
+2021-11-04T14:12:13.965892256+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T14:12:21.231351362+03:00:DEBUG - Window resized: 163, 30
+2021-11-04T14:12:28.211804525+03:00:DEBUG - Window resized: 163, 23
+2021-11-04T14:13:57.951819661+03:00:DEBUG - Key pressed: KeyEvent { code: Char('1'), modifiers: NONE }
+2021-11-04T14:13:58.702242371+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T14:13:58.702678100+03:00:INFO - Quit
+2021-11-04T14:13:58.704581327+03:00:INFO - Goodbye!
+2021-11-04T14:14:02.231659705+03:00:INFO - Welcome to the neon! :)
+2021-11-04T14:14:02.231767918+03:00:INFO - Starting app
+2021-11-04T14:14:02.231798409+03:00:DEBUG - Initializing 
+2021-11-04T14:14:02.231904472+03:00:DEBUG - Enabled raw mode
+2021-11-04T14:14:02.231950495+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T14:14:02.232024633+03:00:DEBUG - Starting handling events
+2021-11-04T14:14:02.232751348+03:00:DEBUG - Created terminal
+2021-11-04T14:14:18.150237987+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T14:14:18.301865008+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
+2021-11-04T14:14:18.517909383+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T14:14:18.717809047+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
+2021-11-04T14:14:18.934174372+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T14:56:54.764702835+03:00:INFO - Welcome to the neon! :)
+2021-11-04T14:56:54.764813700+03:00:INFO - Starting app
+2021-11-04T14:56:54.764844641+03:00:DEBUG - Initializing 
+2021-11-04T14:56:54.764952474+03:00:DEBUG - Enabled raw mode
+2021-11-04T14:56:54.765002074+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T14:56:54.765418139+03:00:DEBUG - Created terminal
+2021-11-04T14:56:54.765750491+03:00:DEBUG - Starting handling events
+2021-11-04T14:56:59.154393663+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T16:05:27.513219527+03:00:DEBUG - Window resized: 189, 11
+2021-11-04T16:05:29.926433104+03:00:DEBUG - Key pressed: KeyEvent { code: Char('й'), modifiers: NONE }
+2021-11-04T16:05:31.140264569+03:00:DEBUG - Key pressed: KeyEvent { code: Char('й'), modifiers: NONE }
+2021-11-04T16:05:32.500584244+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T16:05:32.500838314+03:00:INFO - Quit
+2021-11-04T16:05:32.501825640+03:00:INFO - Goodbye!
+2021-11-04T21:16:37.132623074+03:00:INFO - Welcome to the neon! :)
+2021-11-04T21:16:37.161198981+03:00:INFO - Starting app
+2021-11-04T21:16:37.161281474+03:00:DEBUG - Initializing 
+2021-11-04T21:16:37.161529257+03:00:DEBUG - Enabled raw mode
+2021-11-04T21:16:37.161577611+03:00:DEBUG - Starting handling events
+2021-11-04T21:16:37.161638771+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-04T21:16:37.162146098+03:00:DEBUG - Created terminal
+2021-11-04T21:16:38.827967472+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
+2021-11-04T21:16:39.011839577+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T21:16:39.404071965+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-04T21:16:40.724148720+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: NONE }
+2021-11-04T21:16:40.724408737+03:00:INFO - Quit
+2021-11-04T21:16:40.725359445+03:00:INFO - Goodbye!

@@ -7,18 +7,18 @@ use crossterm::{
 use tui::{backend::CrosstermBackend, Terminal};
 
 use crate::app::event::{EventHandler, EventType};
-use crate::app::state::AppState;
+//use crate::app::state::AppState;
 
 use crate::ui::ui::{UI, UISTATE};
 
 pub struct App {
-    state: AppState,
+    //state: AppState,
 }
 
 impl App {
     pub fn new() -> Self {
         Self {
-            state: AppState::Buffer(0),
+            //state: AppState::Buffer(0),
         }
     }
 
@@ -54,7 +54,7 @@ impl App {
 
         let (mut ui, ui_tx) = UI::new(terminal);
 
-        std::thread::spawn(move || {
+        let ui_thread = std::thread::spawn(move || {
             ui.draw();
         });
 
@@ -71,5 +71,6 @@ impl App {
                 EventType::Tick => ui_tx.send(UISTATE::Tick).unwrap(),
             }
         }
+        ui_thread.join().unwrap()
     }
 }
