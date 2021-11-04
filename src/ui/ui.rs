@@ -11,6 +11,8 @@ use crossterm::{
     terminal::{disable_raw_mode, LeaveAlternateScreen}
 };
 
+use crate::ui::file_tree::file_tree::{FileTree, ElemType};
+
 pub enum UISTATE {
     Redraw,
     Resize(u16, u16),
