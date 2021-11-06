@@ -1,87 +1,103 @@
 use tui::{
     backend::Backend,
-    layout::{Constraint, Direction, Layout, Rect},
+    backend::CrosstermBackend,
+    layout::{Constraint, Direction, Layout},
     Frame, Terminal,
 };
 
 use crossterm::{
-    event::DisableMouseCapture,
+    event::{DisableMouseCapture, EnableMouseCapture},
     execute,
-    terminal::{disable_raw_mode, LeaveAlternateScreen},
+    terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
 };
 
 use crate::ui::file_tree::file_tree::FileTree;
 
 pub enum UISTATE {
-    Redraw,
     Resize(u16, u16),
+    Input(crossterm::event::KeyEvent),
     Tick,
     Quit,
 }
 
 pub struct UI {
-    terminal: Terminal<tui::backend::CrosstermBackend<std::io::Stdout>>,
     rx: std::sync::mpsc::Receiver<UISTATE>,
+    fmanager: FileTree,
 }
-
-fn draw_ui<B: Backend>(f: &mut Frame<B>) {
-    let chunks = Layout::default()
-        .direction(Direction::Vertical)
-        .constraints([Constraint::Percentage(60)].as_ref())
-        .split(f.size());
-    let mut fmanager = FileTree::new();
-    let mut state = fmanager.get_state();
-    f.render_stateful_widget(fmanager.get_widget(), chunks[0], &mut state);
-}
-
-fn update_ui_data(ui: &mut UI) {}
 
 impl UI {
-    pub fn new(
-        terminal: Terminal<tui::backend::CrosstermBackend<std::io::Stdout>>,
-    ) -> (Self, std::sync::mpsc::Sender<UISTATE>) {
+    pub fn new() -> (Self, std::sync::mpsc::Sender<UISTATE>) {
         let (tx, rx) = std::sync::mpsc::channel();
-        (Self { terminal, rx }, tx)
+        (
+            Self {
+                rx,
+                fmanager: FileTree::new(),
+            },
+            tx,
+        )
     }
 
     pub fn draw(&mut self) {
-        let mut size = Rect::default();
-        self.terminal
+        match enable_raw_mode() {
+            Ok(_) => debug!("Enabled raw mode"),
+            Err(_) => panic!("Failed to enable raw mode."),
+        }
+
+        let mut stdout = std::io::stdout();
+
+        match execute!(stdout, EnterAlternateScreen, EnableMouseCapture) {
+            Ok(_) => debug!("Enabled mouse capture and entered to alternate screen"),
+            Err(_) => panic!("Failed to enable mouse capture and entere to alternate screen"),
+        }
+
+        let backend = CrosstermBackend::new(stdout);
+
+        let mut terminal = match Terminal::new(backend) {
+            Ok(t) => {
+                debug!("Created terminal");
+                t
+            }
+            Err(_) => panic!("Failed to create terminal"),
+        };
+
+        loop {
+            terminal
             .draw(|f| {
-                draw_ui(f);
+                self.draw_ui(f);
             })
             .unwrap();
-        loop {
+
             match self.rx.recv().unwrap() {
-                UISTATE::Redraw => {
-                    self.terminal
-                        .draw(|f| {
-                            draw_ui(f);
-                        })
-                        .unwrap();
-                }
-                UISTATE::Resize(w, h) => {
-                    size = Rect::new(0, 0, w, h);
-                    self.terminal
-                        .draw(|f| {
-                            draw_ui(f);
-                        })
-                        .unwrap();
-                }
-                UISTATE::Tick => update_ui_data(self),
+                UISTATE::Resize(_, _) => (),
+                UISTATE::Input(event) => self.handle_ui_input(event),
+                UISTATE::Tick => self.update_ui_data(),
                 UISTATE::Quit => {
                     info!("Quit");
                     disable_raw_mode().unwrap();
                     execute!(
-                        self.terminal.backend_mut(),
+                        terminal.backend_mut(),
                         LeaveAlternateScreen,
                         DisableMouseCapture
                     )
                     .unwrap();
-                    self.terminal.show_cursor().unwrap();
+                    terminal.show_cursor().unwrap();
                     break;
                 }
             }
         }
+    }
+
+    fn update_ui_data(&mut self) {}
+    fn handle_ui_input(&mut self, event: crossterm::event::KeyEvent) {
+        self.fmanager.handle_event(event);
+    }
+
+    fn draw_ui<'a, B: Backend>(&mut self, f: &mut Frame<B>) {
+        let chunks = Layout::default()
+            .direction(Direction::Vertical)
+            .constraints([Constraint::Percentage(60)].as_ref())
+            .split(f.size());
+        let mut state = self.fmanager.get_state();
+        f.render_stateful_widget(self.fmanager.get_widget(), chunks[0], &mut state);
     }
 }

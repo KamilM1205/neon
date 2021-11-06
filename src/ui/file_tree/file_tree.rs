@@ -4,6 +4,10 @@ use tui::{
     widgets::{Block, Borders, List, ListItem, ListState},
 };
 
+use crossterm::{
+    event::{KeyEvent, KeyCode, KeyModifiers}
+};
+
 pub struct FileTree {
     pub is_visible: bool,
     items: Vec<String>,
@@ -12,13 +16,14 @@ pub struct FileTree {
 
 impl FileTree {
     pub fn new() -> Self {
+        let mut list: Vec<String> = Vec::new();
+
+        for i in 1..50 {
+            list.push(i.to_string())
+        }
         Self {
             is_visible: false,
-            items: vec![
-                "dgfg".to_owned(),
-                "dfgdgdfg".to_owned(),
-                "dfgsdgdfg".to_owned(),
-            ],
+            items: list,
             state: 0,
         }
     }
@@ -48,8 +53,34 @@ impl FileTree {
         items
     }
 
-    pub fn handle_event(&mut self) {
+    fn next(&mut self) {
+        if self.state < self.items.len() - 1 {
+            self.state += 1
+        } else {
+            self.state = 0
+        }
+    }
 
+    fn pervious(&mut self) {
+        if self.state > 0 {
+            self.state -= 1
+        } else {
+            self.state = self.items.len() - 1
+        }
+    }
+
+    pub fn handle_event(&mut self, event: KeyEvent) {
+        match event {
+            KeyEvent {
+                modifiers: KeyModifiers::NONE,
+                code: KeyCode::Up,
+            } => self.pervious(),
+            KeyEvent {
+                modifiers: KeyModifiers::NONE,
+                code: KeyCode::Down,
+            } => self.next(),
+            _ => (),
+        }
     }
 
     pub fn get_state(&self) -> ListState {
