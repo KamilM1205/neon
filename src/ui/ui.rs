@@ -72,7 +72,6 @@ impl UI {
                 UISTATE::Input(event) => self.handle_ui_input(event),
                 UISTATE::Tick => self.update_ui_data(),
                 UISTATE::Quit => {
-                    info!("Quit");
                     disable_raw_mode().unwrap();
                     execute!(
                         terminal.backend_mut(),

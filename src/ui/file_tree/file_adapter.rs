@@ -1,13 +1,76 @@
+use std::{
+    env::current_dir,
+    fs::read_dir,
+    path::PathBuf,
+};
+
+#[derive(Eq, PartialEq, Ord, PartialOrd, Copy, Clone)]
 pub enum FileType {
+    Up ,
     Folder,
     File,
 }
+
+#[derive(Clone)]
+pub struct File {
+    pub name: String,
+    pub path: PathBuf,
+    pub ftype: FileType,
+}
+
 pub struct FileAdapter {
-    names: Vec<String>,
-    paths: Vec<String>,
-    types: Vec<FileType>,
+    pub files: Vec<File>,
+    curr_dir: PathBuf,
 }
 
 impl FileAdapter {
-    
+    pub fn new() -> Self {
+        Self {
+            files: Vec::new(),
+            curr_dir: current_dir().unwrap(),
+        }
+    }
+
+    pub fn gen_list(&mut self) {
+        let files = read_dir(self.curr_dir.as_path()).unwrap();
+        let file = File {
+            name: "..".to_owned(),
+            path: PathBuf::from(".."),
+            ftype: FileType::Up,
+        };
+        self.files.push(file);
+
+        for f in files {
+            let f = f.unwrap();
+            let file = File {
+                name: f.file_name().into_string().unwrap(),
+                path: f.path(),
+                ftype: if f.file_type().unwrap().is_dir() {FileType::Folder} else {FileType::File},
+            };
+            self.files.push(file);
+        }
+        self.sort();
+    }
+
+    fn sort(&mut self) {
+        let mut files: Vec<File> = Vec::new();
+        let mut dirs: Vec<File> = Vec::new();
+
+        for i in self.files.iter() {
+            match i.ftype {
+                FileType::Up => dirs.push(i.clone()),
+                FileType::Folder => dirs.push(i.clone()),
+                FileType::File => files.push(i.clone())
+            }
+        }
+        files.sort_by(|a, b| {
+            a.name.cmp(&b.name)
+        });
+
+        dirs.sort_by(|a, b| {
+            a.name.cmp(&b.name)
+        });
+        dirs.append(&mut files);
+        self.files = dirs;
+    }
 }
