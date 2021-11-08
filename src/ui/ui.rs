@@ -61,8 +61,7 @@ impl UI {
         };
 
         loop {
-            terminal
-            .draw(|f| {
+            terminal.draw(|f| {
                 self.draw_ui(f);
             })
             .unwrap();

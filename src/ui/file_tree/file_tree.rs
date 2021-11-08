@@ -4,9 +4,7 @@ use tui::{
     widgets::{Block, Borders, List, ListItem, ListState},
 };
 
-use crossterm::{
-    event::{KeyEvent, KeyCode, KeyModifiers}
-};
+use crossterm::event::{KeyCode, KeyEvent, KeyModifiers};
 
 use crate::ui::file_tree::file_adapter::{FileAdapter, FileType};
 
@@ -41,14 +39,18 @@ impl FileTree {
                         FileType::Up => Style::default(),
                         FileType::Folder => Style::default().fg(Color::Green),
                         FileType::File => Style::default(),
-                    }
+                    },
                 )));
                 ListItem::new(lines).style(Style::default().fg(Color::White).bg(Color::Black))
             })
             .collect();
 
         let items = List::new(items)
-            .block(Block::default().borders(Borders::ALL).title("File explorer"))
+            .block(
+                Block::default()
+                    .borders(Borders::ALL)
+                    .title(self.file_adapter.curr_dir.to_str().unwrap()),
+            )
             .highlight_style(
                 Style::default()
                     .fg(Color::Black)
@@ -74,6 +76,20 @@ impl FileTree {
         }
     }
 
+    fn select(&mut self) {
+        if self.file_adapter.files[self.state].name == ".." {
+            if let Some(parent) = self.file_adapter.curr_dir.parent() {
+                self.file_adapter.curr_dir = parent.to_path_buf();
+            }
+        } else if self.file_adapter.files[self.state].ftype == FileType::Folder {
+            self.file_adapter
+                .curr_dir
+                .push(self.file_adapter.files[self.state].name.clone());
+        }
+        self.state = 0;
+        self.file_adapter.gen_list();
+    }
+
     pub fn handle_event(&mut self, event: KeyEvent) {
         match event {
             KeyEvent {
@@ -84,6 +100,10 @@ impl FileTree {
                 modifiers: KeyModifiers::NONE,
                 code: KeyCode::Down,
             } => self.next(),
+            KeyEvent {
+                modifiers: KeyModifiers::NONE,
+                code: KeyCode::Enter,
+            } => self.select(),
             _ => (),
         }
     }

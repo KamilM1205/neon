@@ -1,12 +1,8 @@
-use std::{
-    env::current_dir,
-    fs::read_dir,
-    path::PathBuf,
-};
+use std::{env::current_dir, fs::read_dir, path::PathBuf};
 
 #[derive(Eq, PartialEq, Ord, PartialOrd, Copy, Clone)]
 pub enum FileType {
-    Up ,
+    Up,
     Folder,
     File,
 }
@@ -20,7 +16,7 @@ pub struct File {
 
 pub struct FileAdapter {
     pub files: Vec<File>,
-    curr_dir: PathBuf,
+    pub curr_dir: PathBuf,
 }
 
 impl FileAdapter {
@@ -32,20 +28,31 @@ impl FileAdapter {
     }
 
     pub fn gen_list(&mut self) {
-        let files = read_dir(self.curr_dir.as_path()).unwrap();
+        self.files = Vec::new();
         let file = File {
             name: "..".to_owned(),
             path: PathBuf::from(".."),
             ftype: FileType::Up,
         };
         self.files.push(file);
+        let files = match read_dir(self.curr_dir.as_path()) {
+            Ok(d) => d,
+            Err(e) => {
+                error!("{}", e);
+                return;
+            }
+        };
 
         for f in files {
             let f = f.unwrap();
             let file = File {
                 name: f.file_name().into_string().unwrap(),
                 path: f.path(),
-                ftype: if f.file_type().unwrap().is_dir() {FileType::Folder} else {FileType::File},
+                ftype: if f.file_type().unwrap().is_dir() {
+                    FileType::Folder
+                } else {
+                    FileType::File
+                },
             };
             self.files.push(file);
         }
@@ -60,16 +67,12 @@ impl FileAdapter {
             match i.ftype {
                 FileType::Up => dirs.push(i.clone()),
                 FileType::Folder => dirs.push(i.clone()),
-                FileType::File => files.push(i.clone())
+                FileType::File => files.push(i.clone()),
             }
         }
-        files.sort_by(|a, b| {
-            a.name.cmp(&b.name)
-        });
+        files.sort_by(|a, b| a.name.cmp(&b.name));
 
-        dirs.sort_by(|a, b| {
-            a.name.cmp(&b.name)
-        });
+        dirs.sort_by(|a, b| a.name.cmp(&b.name));
         dirs.append(&mut files);
         self.files = dirs;
     }

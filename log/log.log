@@ -1,532 +1,74 @@
-2021-11-07T13:30:23.701184737+03:00:INFO - Welcome to the neon! :)
-2021-11-07T13:30:23.701310277+03:00:INFO - Starting app
-2021-11-07T13:30:23.701341934+03:00:DEBUG - Initializing 
-2021-11-07T13:30:23.701485596+03:00:DEBUG - Starting handling events
-2021-11-07T13:30:23.701938998+03:00:DEBUG - Enabled raw mode
-2021-11-07T13:30:23.702014025+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-07T13:30:23.702527321+03:00:DEBUG - Created terminal
-2021-11-07T13:30:27.348951689+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-07T13:30:27.349951957+03:00:INFO - Goodbye!
-2021-11-07T13:31:11.186270555+03:00:INFO - Welcome to the neon! :)
-2021-11-07T13:31:11.186383162+03:00:INFO - Starting app
-2021-11-07T13:31:11.186413947+03:00:DEBUG - Initializing 
-2021-11-07T13:31:11.186547311+03:00:DEBUG - Starting handling events
-2021-11-07T13:33:39.126820537+03:00:INFO - Welcome to the neon! :)
-2021-11-07T13:33:39.126925197+03:00:INFO - Starting app
-2021-11-07T13:33:39.126954885+03:00:DEBUG - Initializing 
-2021-11-07T13:33:39.127151329+03:00:DEBUG - Starting handling events
-2021-11-07T13:33:39.133770271+03:00:DEBUG - Enabled raw mode
-2021-11-07T13:33:39.133881979+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-07T13:33:39.134720437+03:00:DEBUG - Created terminal
-2021-11-07T13:33:45.287828860+03:00:DEBUG - Window resized: 189, 35
-2021-11-07T13:33:46.781134688+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:47.372667614+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:47.604989035+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:47.820735760+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:48.044928205+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:48.204015019+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:48.364868700+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:48.524832535+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:48.780843137+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
-2021-11-07T13:33:49.092848641+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:49.276747733+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:49.516863100+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:50.016705179+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:50.046267672+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:50.076772084+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:50.107581102+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:50.137806888+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:50.356943561+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:50.548973477+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:50.724878126+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:50.924480890+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:51.109206457+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:51.460322796+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:52.100947474+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:52.316970155+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:52.493113842+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:52.660803347+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:52.836731814+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:53.028902761+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:53.205071021+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:53.398453426+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:53.580832917+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:53.748829612+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:53.924540777+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:54.612910278+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:54.772945381+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:54.956899312+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:55.455450965+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:55.486357208+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:55.517263579+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:55.545684323+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:55.576414251+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:55.725173918+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:55.908432569+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:56.084845747+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:56.380971067+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:56.549071740+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:56.724937348+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:56.876675458+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:57.376632783+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:57.406293614+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:57.436011494+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:57.465842434+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:57.496024447+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:57.621017638+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:57.797011616+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:33:58.268928737+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:58.435896881+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:58.936797690+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:58.965722766+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:58.997567283+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:59.026038209+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:59.055704632+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:59.356984731+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:59.856391793+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:33:59.885803588+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:34:00.204906184+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:35:29.536793433+03:00:DEBUG - Window resized: 189, 12
-2021-11-07T13:35:29.791922628+03:00:DEBUG - Window resized: 189, 15
-2021-11-07T13:39:10.553158455+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-07T13:39:10.554378817+03:00:INFO - Goodbye!
-2021-11-07T13:39:13.823498599+03:00:INFO - Welcome to the neon! :)
-2021-11-07T13:39:13.823608937+03:00:INFO - Starting app
-2021-11-07T13:39:13.823641430+03:00:DEBUG - Initializing 
-2021-11-07T13:39:13.823787826+03:00:DEBUG - Starting handling events
-2021-11-07T13:39:13.823873798+03:00:DEBUG - Enabled raw mode
-2021-11-07T13:39:13.823930660+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-07T13:39:13.824699591+03:00:DEBUG - Created terminal
-2021-11-07T13:39:21.150285994+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:21.830056282+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:22.238066035+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:22.446111606+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:22.605672605+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:23.105831936+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:23.135840263+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:23.166395530+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:23.196180144+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:23.226532602+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:23.257919822+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:23.287979416+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:23.318311961+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:23.347796798+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:23.542821623+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:23.782147123+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:24.157978796+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:24.373040882+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:24.590509773+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:24.821986776+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:25.206081819+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:25.389165028+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:25.573940020+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:25.758167199+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:25.966047744+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:26.373081594+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:26.873377607+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:26.903389376+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:26.933764447+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:26.964912280+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:26.994742689+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:27.142013872+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:27.350062493+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:27.542377120+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:27.726231120+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:27.910001453+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:28.118149712+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:39:28.454093501+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:28.638109573+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:28.839738703+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:29.686202345+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:30.182187262+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:30.645518225+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:32.558331650+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:32.877986349+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:39:33.118001297+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:40:00.402739753+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-07T13:40:00.403942923+03:00:INFO - Goodbye!
-2021-11-07T13:48:56.076576652+03:00:INFO - Welcome to the neon! :)
-2021-11-07T13:48:56.076690029+03:00:INFO - Starting app
-2021-11-07T13:48:56.076727843+03:00:DEBUG - Initializing 
-2021-11-07T13:48:56.076978789+03:00:DEBUG - Starting handling events
-2021-11-07T13:48:56.077049444+03:00:DEBUG - Enabled raw mode
-2021-11-07T13:48:56.077159224+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-07T13:48:56.078047722+03:00:DEBUG - Created terminal
-2021-11-07T13:48:58.502904728+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:48:59.135002244+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:48:59.638760241+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:48:59.910793202+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:49:00.206210172+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:49:00.382895195+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:49:00.574819791+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:49:00.766755627+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:49:00.958865374+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:49:01.118615111+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:49:01.310976865+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:49:01.494320038+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:49:03.102520087+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:49:03.602624090+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:49:03.633049931+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:49:03.662859036+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:49:03.894879652+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:49:04.071169865+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:49:04.271639453+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:49:04.454510897+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:23.905391647+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:24.190214172+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:24.406902872+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:24.615033639+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:24.759135369+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:25.259637763+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:25.510973854+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:25.703052117+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:25.894311770+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:26.062921547+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:26.311144239+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:26.495083257+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:26.654860076+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:26.847516275+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:27.015613975+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T13:56:27.287080930+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:27.495036412+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:27.670488740+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:27.838801753+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:28.006776772+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:28.174647471+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:28.350947922+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:28.542444720+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:28.727118480+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:28.902660704+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:29.078994462+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:29.263045866+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:29.447000320+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T13:56:47.470476590+03:00:DEBUG - Window resized: 163, 15
-2021-11-07T14:00:28.861175546+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-07T14:00:28.862576067+03:00:INFO - Goodbye!
-2021-11-07T14:00:31.604105295+03:00:INFO - Welcome to the neon! :)
-2021-11-07T14:00:31.604276296+03:00:INFO - Starting app
-2021-11-07T14:00:31.604332023+03:00:DEBUG - Initializing 
-2021-11-07T14:00:31.604747084+03:00:DEBUG - Enabled raw mode
-2021-11-07T14:00:31.604841360+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-07T14:00:31.605613239+03:00:DEBUG - Created terminal
-2021-11-07T14:00:31.610869323+03:00:DEBUG - Starting handling events
-2021-11-07T14:00:33.319645064+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:33.819954815+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:33.849786177+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:33.878993659+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:33.909082599+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:33.938703036+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:33.969509410+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:33.999401457+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.030044616+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.059849289+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.090583685+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.120947520+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.149969120+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.180898412+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.210057645+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.240216316+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.269929521+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.301048016+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.331600936+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.361408204+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.391894874+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.420542259+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.451128065+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.481192850+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.510629659+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.540867891+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.570909020+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.600594926+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.630701532+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.661030095+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.690594957+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.721716783+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.751923594+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.782140407+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.812492014+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.843537031+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.873650579+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.903294846+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:34.934554674+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:00:35.200047752+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:00:35.543720770+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:00:35.719488612+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:00:35.887408994+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:00:36.406934319+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
-2021-11-07T14:00:36.624534706+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:00:36.791156749+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:00:40.672562748+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-07T14:00:40.673359865+03:00:INFO - Goodbye!
-2021-11-07T14:13:27.351542913+03:00:INFO - Welcome to the neon! :)
-2021-11-07T14:13:27.351654749+03:00:INFO - Starting app
-2021-11-07T14:13:27.351685464+03:00:DEBUG - Initializing 
-2021-11-07T14:13:27.351919892+03:00:DEBUG - Enabled raw mode
-2021-11-07T14:13:27.351976940+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-07T14:13:27.352557132+03:00:DEBUG - Starting handling events
-2021-11-07T14:13:27.352612458+03:00:DEBUG - Created terminal
-2021-11-07T14:13:38.213096700+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-07T14:13:38.214136439+03:00:INFO - Goodbye!
-2021-11-07T14:13:40.907739514+03:00:INFO - Welcome to the neon! :)
-2021-11-07T14:13:40.907847766+03:00:INFO - Starting app
-2021-11-07T14:13:40.907885470+03:00:DEBUG - Initializing 
-2021-11-07T14:13:40.908054427+03:00:DEBUG - Starting handling events
-2021-11-07T14:13:40.908118931+03:00:DEBUG - Enabled raw mode
-2021-11-07T14:13:40.908178769+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-07T14:13:40.908994611+03:00:DEBUG - Created terminal
-2021-11-07T14:13:42.417962787+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:13:42.978328817+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:13:46.866610845+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:13:47.114303397+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:13:47.753842099+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:13:48.026358904+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:13:48.370309407+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:13:48.729260655+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:13:48.914350803+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:13:49.162157248+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:13:49.402172087+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:14:41.350871234+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-07T14:14:41.351622526+03:00:INFO - Goodbye!
-2021-11-07T14:14:44.044813235+03:00:INFO - Welcome to the neon! :)
-2021-11-07T14:14:44.044904181+03:00:INFO - Starting app
-2021-11-07T14:14:44.044932314+03:00:DEBUG - Initializing 
-2021-11-07T14:14:44.045083703+03:00:DEBUG - Starting handling events
-2021-11-07T14:14:44.045194143+03:00:DEBUG - Enabled raw mode
-2021-11-07T14:14:44.045268930+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-07T14:14:44.046124720+03:00:DEBUG - Created terminal
-2021-11-07T14:14:46.194446701+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:46.466297510+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:46.642365989+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:46.817808560+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:46.994292104+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:47.202380098+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:47.418156404+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:47.674074344+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:47.882327921+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:48.114376610+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:48.482100890+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:48.682236792+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:49.035382016+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:49.442251857+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:49.602187903+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:49.786191663+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:49.954291603+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:50.122284342+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:50.298104956+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:50.798322610+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:50.828605969+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:50.857850904+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:50.888001198+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:50.919153488+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:50.948819794+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:51.138240729+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:51.465806987+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:52.386365735+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:53.010329577+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:14:53.226198637+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:15:12.974055276+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-07T14:15:12.974689557+03:00:INFO - Goodbye!
-2021-11-07T14:15:16.374094031+03:00:INFO - Welcome to the neon! :)
-2021-11-07T14:15:16.374210598+03:00:INFO - Starting app
-2021-11-07T14:15:16.374240543+03:00:DEBUG - Initializing 
-2021-11-07T14:15:16.374391435+03:00:DEBUG - Starting handling events
-2021-11-07T14:15:16.374466868+03:00:DEBUG - Enabled raw mode
-2021-11-07T14:15:16.374521662+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-07T14:15:16.375171882+03:00:DEBUG - Created terminal
-2021-11-07T14:16:47.090457562+03:00:DEBUG - Window resized: 189, 15
-2021-11-07T14:16:48.183467381+03:00:DEBUG - Window resized: 163, 15
-2021-11-07T14:16:50.861319141+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-07T14:16:50.863293826+03:00:INFO - Goodbye!
-2021-11-07T14:16:53.968016672+03:00:INFO - Welcome to the neon! :)
-2021-11-07T14:16:53.968124632+03:00:INFO - Starting app
-2021-11-07T14:16:53.968154370+03:00:DEBUG - Initializing 
-2021-11-07T14:16:53.968391039+03:00:DEBUG - Enabled raw mode
-2021-11-07T14:16:53.968446745+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-07T14:16:53.968850930+03:00:DEBUG - Starting handling events
-2021-11-07T14:16:53.969085728+03:00:DEBUG - Created terminal
-2021-11-07T14:16:55.779783026+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:55.954470177+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:56.154523601+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:56.354546990+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:56.538001221+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:56.706498477+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:56.890571898+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:57.058615556+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:57.226248337+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:57.410289121+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:57.586475714+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:57.746413984+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:58.436945178+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:58.610377056+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:58.802545403+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:59.010477319+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:59.146587852+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:59.314747396+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:59.506173278+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:59.682357307+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:16:59.858448890+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:00.034325739+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:00.218395727+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:00.386564885+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:00.561932704+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:00.722639876+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:00.890383010+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:01.050817591+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:01.250527894+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:01.434388081+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:01.578101058+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:01.746488929+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:01.914401472+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:02.074351821+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:02.266623097+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:02.418338720+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:02.626569027+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:02.954563744+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:03.231166093+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:03.449967026+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:03.658386664+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:03.818532018+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:03.973704712+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:04.154520880+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:04.306461784+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:04.498256035+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:04.674443639+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:04.834385347+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:04.994628779+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:05.194507492+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:05.362668553+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:05.554520083+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:05.922680424+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:06.130550380+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:06.298616530+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:06.481968262+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:06.650485550+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:06.842608499+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:07.010722640+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:07.194495129+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:07.370147266+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:07.570498133+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:07.754195258+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:07.938540991+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:08.122538682+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:08.314533223+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:08.506514046+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:08.690161710+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:08.874465291+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:09.042559559+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:09.226522848+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:09.426526732+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:09.602557018+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:09.777740731+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:09.954516214+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:10.138456832+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:10.322550775+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:10.618577532+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:10.938544855+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:11.114374986+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:11.298487260+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:11.474336387+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:11.650050814+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:11.834269045+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:12.018395156+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:12.194614396+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:12.378454692+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:12.546517776+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:12.730316029+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:12.922469055+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:17:13.402534943+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:09.662145607+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-07T14:28:09.662890789+03:00:INFO - Goodbye!
-2021-11-07T14:28:15.209354831+03:00:INFO - Welcome to the neon! :)
-2021-11-07T14:28:15.209482838+03:00:INFO - Starting app
-2021-11-07T14:28:15.209513564+03:00:DEBUG - Initializing 
-2021-11-07T14:28:15.209667004+03:00:DEBUG - Starting handling events
-2021-11-07T14:28:15.209761106+03:00:DEBUG - Enabled raw mode
-2021-11-07T14:28:15.209828517+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-07T14:28:15.210485253+03:00:DEBUG - Created terminal
-2021-11-07T14:28:18.275556853+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:18.972821356+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:19.299523748+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:19.795487759+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:20.339599334+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:20.707540633+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:21.099645920+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:21.547259795+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:21.963524235+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:22.275480536+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:22.546691760+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:22.827542940+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:23.251522778+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:23.603266323+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:23.779506504+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:24.279403523+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:24.309364177+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:24.338183535+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:24.369086337+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:24.398685764+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:24.429095187+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:24.459284834+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:24.489729591+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:24.659465680+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:24.859135674+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:25.219428489+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:25.395594558+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:25.619330673+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:28:25.803218214+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:30:38.736814363+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-07T14:30:38.737838578+03:00:INFO - Goodbye!
-2021-11-07T14:30:41.915727899+03:00:INFO - Welcome to the neon! :)
-2021-11-07T14:30:41.915838301+03:00:INFO - Starting app
-2021-11-07T14:30:41.915868602+03:00:DEBUG - Initializing 
-2021-11-07T14:30:41.916450901+03:00:DEBUG - Enabled raw mode
-2021-11-07T14:30:41.916535096+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-07T14:30:41.917258374+03:00:DEBUG - Created terminal
-2021-11-07T14:30:41.919151519+03:00:DEBUG - Starting handling events
-2021-11-07T14:30:43.547710210+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:30:43.875854269+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:30:44.083583159+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:30:44.267668+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:30:44.427369040+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:30:44.603588151+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:30:44.779820554+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:30:44.947397103+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:30:45.131667200+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:30:45.531321153+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:30:45.835301459+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:30:46.803621583+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:31:12.958034187+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-07T14:31:12.959774054+03:00:INFO - Goodbye!
-2021-11-07T14:31:15.910146983+03:00:INFO - Welcome to the neon! :)
-2021-11-07T14:31:15.910251712+03:00:INFO - Starting app
-2021-11-07T14:31:15.910281823+03:00:DEBUG - Initializing 
-2021-11-07T14:31:15.910415693+03:00:DEBUG - Starting handling events
-2021-11-07T14:31:15.910514931+03:00:DEBUG - Enabled raw mode
-2021-11-07T14:31:15.910576661+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-07T14:31:15.911213851+03:00:DEBUG - Created terminal
-2021-11-07T14:31:18.237253814+03:00:DEBUG - Window resized: 163, 41
-2021-11-07T14:31:19.243407179+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:31:19.451221417+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:31:19.699583960+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:31:19.883633102+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:31:20.059679499+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:31:20.251624228+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:31:20.443291898+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:32:47.323989441+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:32:47.331591847+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:32:47.483456629+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:32:47.635872146+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:32:47.795892620+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:32:47.931959366+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:32:48.067681658+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-07T14:32:48.260056209+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:32:48.427834193+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:32:48.699098329+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
-2021-11-07T14:32:49.139963954+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:32:49.307939963+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:32:49.458853719+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:32:49.959091697+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:32:49.989000488+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:32:50.019385318+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:32:50.050439904+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-07T14:32:50.580914398+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-07T14:32:50.582737040+03:00:INFO - Goodbye!
+2021-11-08T10:52:13.092781278+03:00:INFO - Welcome to the neon! :)
+2021-11-08T10:52:13.094124833+03:00:INFO - Starting app
+2021-11-08T10:52:13.095348057+03:00:DEBUG - Initializing 
+2021-11-08T10:52:13.097236354+03:00:DEBUG - Starting handling events
+2021-11-08T10:52:13.099068361+03:00:DEBUG - Enabled raw mode
+2021-11-08T10:52:13.100725562+03:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-08T10:52:13.103026116+03:00:DEBUG - Created terminal
+2021-11-08T10:52:14.409566892+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:14.817149037+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:16.358616971+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:16.695977702+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:17.682615868+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:18.180644693+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:18.504518049+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:18.988058292+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:22.579410993+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:23.072392790+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:23.571992426+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:23.746039156+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:23.925422606+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:24.429832936+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:25.351460697+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:26.016020080+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:26.647953720+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:26.929759987+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:27.500065437+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:27.878818266+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:28.097986827+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:28.298610788+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:28.847303138+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:29.031496513+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:29.545724688+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:29.872764666+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:30.329169600+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:31.414535561+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:31.960130917+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:32.460464976+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:32.512433505+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:32.564094605+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:32.888727246+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:33.198551584+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:33.850942355+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:34.126110810+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:34.710535535+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:35.129974743+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:35.576496672+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:36.075957538+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:36.126307418+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:36.179263465+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:36.229809801+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:36.284260954+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:36.339770023+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:36.499139398+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:37.188569853+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:37.707279502+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:38.026690309+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:38.426025699+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:38.745109592+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:39.034933429+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:39.284539514+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:40.223061605+03:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
+2021-11-08T10:52:40.876805140+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:41.808799646+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:42.119541443+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:42.379437148+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:42.907402649+03:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-08T10:52:43.117765053+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:43.655926399+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:44.942069341+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:46.185717888+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:46.875161981+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:47.579365137+03:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
+2021-11-08T10:52:49.292144256+03:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
+2021-11-08T10:52:49.295060585+03:00:INFO - Goodbye!
