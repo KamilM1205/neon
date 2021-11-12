@@ -1,0 +1,13 @@
+[ThemeHeader]
+    name = "Apprentice"
+    version = "0.1.0"
+    author = "KamilM1205"
+    description = "-"
+
+[FileManager]
+    back = [38, 38, 38]
+    select = [188, 188, 188]
+    folder = [95, 175, 175]
+    folder_select = [95, 135, 135]
+    file = [255, 255, 255]
+    file_select = [108, 108, 108]

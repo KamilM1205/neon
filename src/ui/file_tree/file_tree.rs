@@ -49,7 +49,8 @@ impl FileTree {
             .block(
                 Block::default()
                     .borders(Borders::ALL)
-                    .title(self.file_adapter.curr_dir.to_str().unwrap()),
+                    .title(self.file_adapter.curr_dir.to_str().unwrap())
+                    .style(Style::default().bg(Color::Black)),
             )
             .highlight_style(
                 Style::default()
