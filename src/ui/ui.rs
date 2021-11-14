@@ -11,6 +11,7 @@ use crossterm::{
     terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
 };
 
+use crate::config::theme::Theme;
 use crate::ui::file_tree::file_tree::FileTree;
 
 pub enum UISTATE {
@@ -26,12 +27,12 @@ pub struct UI {
 }
 
 impl UI {
-    pub fn new() -> (Self, std::sync::mpsc::Sender<UISTATE>) {
+    pub fn new(theme: Theme) -> (Self, std::sync::mpsc::Sender<UISTATE>) {
         let (tx, rx) = std::sync::mpsc::channel();
         (
             Self {
                 rx,
-                fmanager: FileTree::new(),
+                fmanager: FileTree::new(theme.fmanager),
             },
             tx,
         )
@@ -61,10 +62,11 @@ impl UI {
         };
 
         loop {
-            terminal.draw(|f| {
-                self.draw_ui(f);
-            })
-            .unwrap();
+            terminal
+                .draw(|f| {
+                    self.draw_ui(f);
+                })
+                .unwrap();
 
             match self.rx.recv().unwrap() {
                 UISTATE::Resize(_, _) => (),

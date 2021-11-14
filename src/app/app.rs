@@ -5,6 +5,8 @@ use crate::app::event::{EventHandler, EventType};
 
 use crate::ui::ui::{UI, UISTATE};
 
+use crate::config::config::Config;
+
 pub struct App {
     //state: AppState,
 }
@@ -18,13 +20,14 @@ impl App {
 
     pub fn run(&mut self) {
         info!("Starting app");
+        let config = Config::load("config/config.toml".to_owned()).unwrap();
         let (mut eh, rx) = EventHandler::new();
 
         std::thread::spawn(move || {
             eh.handle_event();
         });
 
-        let (mut ui, ui_tx) = UI::new();
+        let (mut ui, ui_tx) = UI::new(config.theme);
 
         let ui_thread = std::thread::spawn(move || {
             ui.draw();

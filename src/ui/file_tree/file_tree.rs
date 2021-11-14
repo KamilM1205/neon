@@ -1,21 +1,23 @@
 use tui::{
-    style::{Color, Modifier, Style},
+    style::{Modifier, Style},
     text::{Span, Spans},
     widgets::{Block, Borders, List, ListItem, ListState},
 };
 
 use crossterm::event::{KeyCode, KeyEvent, KeyModifiers};
 
+use crate::config::theme::FileManager;
 use crate::ui::file_tree::file_adapter::{FileAdapter, FileType};
 
 pub struct FileTree {
     pub is_visible: bool,
     file_adapter: FileAdapter,
     state: usize,
+    theme: FileManager,
 }
 
 impl FileTree {
-    pub fn new() -> Self {
+    pub fn new(theme: FileManager) -> Self {
         let mut file_adapter = FileAdapter::new();
         file_adapter.gen_list();
 
@@ -23,6 +25,7 @@ impl FileTree {
             is_visible: false,
             file_adapter,
             state: 0,
+            theme,
         }
     }
 
@@ -36,12 +39,12 @@ impl FileTree {
                 lines.push(Spans::from(Span::styled(
                     i.name.clone(),
                     match i.ftype {
-                        FileType::Up => Style::default(),
-                        FileType::Folder => Style::default().fg(Color::Green),
-                        FileType::File => Style::default(),
+                        FileType::Up => Style::default().fg(self.theme.file),
+                        FileType::Folder => Style::default().fg(self.theme.folder),
+                        FileType::File => Style::default().fg(self.theme.file),
                     },
                 )));
-                ListItem::new(lines).style(Style::default().fg(Color::White).bg(Color::Black))
+                ListItem::new(lines).style(Style::default().fg(self.theme.select).bg(self.theme.back))
             })
             .collect();
 
@@ -50,12 +53,12 @@ impl FileTree {
                 Block::default()
                     .borders(Borders::ALL)
                     .title(self.file_adapter.curr_dir.to_str().unwrap())
-                    .style(Style::default().bg(Color::Black)),
+                    .style(Style::default().bg(self.theme.back)),
             )
             .highlight_style(
                 Style::default()
-                    .fg(Color::Black)
-                    .bg(Color::White)
+                    .fg(self.theme.file_select)
+                    .bg(self.theme.select)
                     .add_modifier(Modifier::BOLD),
             );
         items

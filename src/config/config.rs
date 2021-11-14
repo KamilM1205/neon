@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use crate::config::theme::Theme;
+use crate::config::theme::{Theme, ThemeError};
 
 #[derive(Copy, Clone, Deserialize, Serialize)]
 pub struct ConfigFile<'a> {
@@ -8,17 +8,17 @@ pub struct ConfigFile<'a> {
     plugin_use: Option<bool>,
 }
 
-#[derive(Copy, Clone)]
+#[derive(Clone)]
 pub struct Config {
-    theme: Theme,
+    pub theme: Theme,
 }
 
-impl Config {
-    pub fn load(path: String) -> Self {
+impl<'a> Config {
+    pub fn load(path: String) -> Result<Self, ThemeError<&'a str>> {
         use std::fs;
         use std::path;
         let path = path::PathBuf::from(path);
-        let mut data = String::new();
+        let data: String;
         if path.exists() {
             data = fs::read_to_string(path).unwrap();
         } else {
@@ -26,12 +26,17 @@ impl Config {
             data = toml::to_string(&ConfigFile {
                 theme: None,
                 plugin_use: Some(false),
-            }).unwrap();
-            fs::write(&path, &data).unwrap();
+            })
+            .unwrap();
+            fs::write(&path, data.clone()).unwrap();
         }
-        let decoded: ConfigFile = toml::from_str(&data).unwrap();
-        Self {
-            theme: Theme::load(decoded.theme),
-        }
+        let c = std::borrow::Cow::from(data);
+        let decoded: ConfigFile = toml::from_str(&c).unwrap();
+        let theme = match Theme::load(&decoded.theme.unwrap()) {
+            Ok(t) => t,
+            Err(e) => panic!("{}", e),
+        };
+        drop(decoded);
+        Ok(Self { theme })
     }
 }

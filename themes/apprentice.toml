@@ -1,10 +1,10 @@
-[ThemeHeader]
+[theme_header]
     name = "Apprentice"
-    version = "0.1.0"
-    author = "KamilM1205"
-    description = "-"
+    version = "-"
+    author = "Jeet Sukumaran"
+    description = "Apprentice is a dark, low-contrast colorscheme for Vim based on the awesome Sorcerer by Jeet Sukumaran."
 
-[FileManager]
+[file_manager]
     back = [38, 38, 38]
     select = [188, 188, 188]
     folder = [95, 175, 175]
