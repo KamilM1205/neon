@@ -14,6 +14,7 @@ pub struct File {
     pub ftype: FileType,
 }
 
+#[derive(Clone)]
 pub struct FileAdapter {
     pub files: Vec<File>,
     pub curr_dir: PathBuf,
@@ -31,7 +32,7 @@ impl FileAdapter {
         self.files = Vec::new();
         let file = File {
             name: "..".to_owned(),
-            path: PathBuf::from(".."),
+            path: PathBuf::from(self.curr_dir.clone()),
             ftype: FileType::Up,
         };
         self.files.push(file);

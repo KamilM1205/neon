@@ -98,6 +98,6 @@ impl UI {
             .constraints([Constraint::Percentage(60)].as_ref())
             .split(f.size());
         let mut state = self.fmanager.get_state();
-        f.render_stateful_widget(self.fmanager.get_widget(), chunks[0], &mut state);
+        f.render_stateful_widget(self.fmanager.clone(), chunks[0], &mut state);
     }
 }
