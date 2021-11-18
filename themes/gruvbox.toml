@@ -1,0 +1,13 @@
+[theme_header]
+    name = "Gruvbox"
+    version = "-"
+    author = "-"
+    description = "-"
+
+[file_manager]
+    back = [60,56,54]
+    select = [102,92,84]
+    folder = [69, 133, 136]
+    folder_select = [131, 165, 152]
+    file = [235, 219, 178]
+    file_select = [168, 153, 148]

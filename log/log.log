@@ -1,34 +1,11 @@
-2021-11-15T20:32:06.105575583+04:00:INFO - Welcome to the neon! :)
-2021-11-15T20:32:06.105674048+04:00:INFO - Starting app
-2021-11-15T20:32:06.106344890+04:00:DEBUG - Initializing 
-2021-11-15T20:32:06.106486906+04:00:DEBUG - Starting handling events
-2021-11-15T20:32:06.106583571+04:00:DEBUG - Enabled raw mode
-2021-11-15T20:32:06.106634013+04:00:DEBUG - Enabled mouse capture and entered to alternate screen
-2021-11-15T20:32:06.107547884+04:00:DEBUG - Created terminal
-2021-11-15T20:32:09.515105812+04:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
-2021-11-15T20:32:10.259284571+04:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
-2021-11-15T20:32:11.859203971+04:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-15T20:32:12.018795594+04:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-15T20:32:12.179021960+04:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-15T20:32:12.836672049+04:00:DEBUG - Key pressed: KeyEvent { code: Char('a'), modifiers: CONTROL }
-2021-11-15T20:32:13.469445513+04:00:DEBUG - Key pressed: KeyEvent { code: Char('d'), modifiers: NONE }
-2021-11-15T20:32:14.867127553+04:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-15T20:32:15.050849348+04:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-15T20:32:15.378967279+04:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
-2021-11-15T20:32:16.619083462+04:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
-2021-11-15T20:32:18.315224411+04:00:DEBUG - Key pressed: KeyEvent { code: Char('a'), modifiers: CONTROL }
-2021-11-15T20:32:18.611701691+04:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-15T20:32:18.906477614+04:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-15T20:32:19.146252067+04:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
-2021-11-15T20:32:20.130879793+04:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
-2021-11-15T20:32:20.523048339+04:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-15T20:32:20.923715640+04:00:DEBUG - Key pressed: KeyEvent { code: Char('a'), modifiers: CONTROL }
-2021-11-15T20:32:21.931399510+04:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
-2021-11-15T20:32:24.859087875+04:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
-2021-11-15T20:32:30.043684358+04:00:DEBUG - Key pressed: KeyEvent { code: Char('a'), modifiers: CONTROL }
-2021-11-15T20:32:30.652065746+04:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
-2021-11-15T20:32:30.890423888+04:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-15T20:32:31.290996890+04:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }
-2021-11-15T20:32:31.611045396+04:00:DEBUG - Key pressed: KeyEvent { code: Enter, modifiers: NONE }
-2021-11-15T20:32:33.460417067+04:00:DEBUG - Key pressed: KeyEvent { code: Char('q'), modifiers: CONTROL }
-2021-11-15T20:32:33.461615413+04:00:INFO - Goodbye!
+2021-11-16T22:41:44.886353204+04:00:INFO - Welcome to the neon! :)
+2021-11-16T22:41:44.886458523+04:00:INFO - Starting app
+2021-11-16T22:41:44.887132402+04:00:DEBUG - Initializing 
+2021-11-16T22:41:44.887397397+04:00:DEBUG - Enabled raw mode
+2021-11-16T22:41:44.887636755+04:00:DEBUG - Enabled mouse capture and entered to alternate screen
+2021-11-16T22:41:44.888724579+04:00:DEBUG - Created terminal
+2021-11-16T22:41:44.894524736+04:00:DEBUG - Starting handling events
+2021-11-16T22:42:29.924689056+04:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-16T22:42:30.146440710+04:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-16T22:42:30.777764130+04:00:DEBUG - Key pressed: KeyEvent { code: Down, modifiers: NONE }
+2021-11-16T22:42:30.946138311+04:00:DEBUG - Key pressed: KeyEvent { code: Up, modifiers: NONE }

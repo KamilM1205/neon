@@ -251,7 +251,7 @@ impl StatefulWidget for Menu {
             .iter()
             .map(|i| {
                 let mut lines: Vec<Spans> = Vec::new();
-                lines.push(Spans::from(Span::styled(i, Style::default())));
+                lines.push(Spans::from(Span::styled(i, Style::default().fg(self.theme.file))));
                 ListItem::new(lines)
                     .style(Style::default().fg(self.theme.select).bg(self.theme.back))
             })
@@ -261,7 +261,7 @@ impl StatefulWidget for Menu {
                 Block::default()
                     .borders(Borders::ALL)
                     .title("Menu")
-                    .style(Style::default().bg(self.theme.back)),
+                    .style(Style::default().bg(self.theme.back).fg(self.theme.folder_select)),
             )
             .highlight_style(
                 Style::default()

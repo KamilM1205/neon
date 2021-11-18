@@ -105,7 +105,7 @@ impl FileTree {
     }
 
     pub fn update_state(&mut self) {
-        if self.state > self.file_adapter.files.len() {
+        if self.state >= self.file_adapter.files.len() {
             self.state = 0
         }
     }
@@ -149,7 +149,7 @@ impl StatefulWidget for FileTree {
                 Block::default()
                     .borders(Borders::ALL)
                     .title(self.file_adapter.curr_dir.to_str().unwrap())
-                    .style(Style::default().bg(self.theme.back)),
+                    .style(Style::default().bg(self.theme.back).fg(self.theme.folder_select)),
             )
             .highlight_style(
                 Style::default()
