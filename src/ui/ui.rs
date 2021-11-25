@@ -7,9 +7,9 @@ use tui::{
 
 use crossterm::{
     event::{DisableMouseCapture, EnableMouseCapture},
+    event::{KeyCode, KeyEvent, KeyModifiers},
     execute,
     terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
-    event::{KeyEvent, KeyCode, KeyModifiers},
 };
 
 use crate::config::theme::Theme;
@@ -29,14 +29,14 @@ enum State {
     FManager,
 }
 
-pub struct UI<'a> {
+pub struct UI {
     rx: std::sync::mpsc::Receiver<UISTATE>,
     fmanager: FileTree,
-    editor: Editor<'a>,
+    editor: Editor,
     state: State,
 }
 
-impl<'a> UI<'a> {
+impl UI {
     pub fn new(theme: Theme) -> (Self, std::sync::mpsc::Sender<UISTATE>) {
         let (tx, rx) = std::sync::mpsc::channel();
         (
@@ -74,15 +74,22 @@ impl<'a> UI<'a> {
         };
 
         loop {
-            terminal
-                .draw(|f| {
-                    self.draw_ui(f);
-                })
-                .unwrap();
-
             match self.rx.recv().unwrap() {
-                UISTATE::Resize(_, _) => (),
-                UISTATE::Input(event) => self.handle_ui_input(event),
+                UISTATE::Resize(_, _) => {
+                    terminal
+                        .draw(|f| {
+                            self.draw_ui(f);
+                        })
+                        .unwrap();
+                }
+                UISTATE::Input(event) => {
+                    self.handle_ui_input(event);
+                    terminal
+                        .draw(|f| {
+                            self.draw_ui(f);
+                        })
+                        .unwrap();
+                }
                 UISTATE::Tick => self.update_ui_data(),
                 UISTATE::Quit => {
                     disable_raw_mode().unwrap();
@@ -102,7 +109,11 @@ impl<'a> UI<'a> {
     fn update_ui_data(&mut self) {}
 
     fn handle_ui_input(&mut self, event: crossterm::event::KeyEvent) {
-        if let KeyEvent {modifiers: KeyModifiers::CONTROL, code: KeyCode::Char('w')} = event {
+        if let KeyEvent {
+            modifiers: KeyModifiers::CONTROL,
+            code: KeyCode::Char('w'),
+        } = event
+        {
             self.state = if self.state == State::Editor {
                 State::FManager
             } else {
