@@ -72,6 +72,10 @@ impl UI {
             }
             Err(_) => panic!("Failed to create terminal"),
         };
+        
+        terminal.draw(|f| {
+            self.draw_ui(f);
+        }).unwrap();
 
         loop {
             match self.rx.recv().unwrap() {
@@ -84,6 +88,7 @@ impl UI {
                 }
                 UISTATE::Input(event) => {
                     self.handle_ui_input(event);
+                    std::thread::sleep(std::time::Duration::from_millis(30));
                     terminal
                         .draw(|f| {
                             self.draw_ui(f);
@@ -103,6 +108,7 @@ impl UI {
                     break;
                 }
             }
+            terminal.show_cursor().unwrap();
         }
     }
 

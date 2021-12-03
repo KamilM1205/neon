@@ -46,7 +46,7 @@ impl App {
                     _ => ui_tx.send(UISTATE::Input(event)).unwrap(),
                 },
                 EventType::Resize(w, h) => ui_tx.send(UISTATE::Resize(w, h)).unwrap(),
-                EventType::Tick => ui_tx.send(UISTATE::Tick).unwrap(),
+                EventType::Tick => {},
             }
         }
         ui_thread.join().unwrap();

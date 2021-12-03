@@ -10,7 +10,7 @@ use tui::{
 use crossterm::{
     cursor::{Hide, MoveTo, RestorePosition, SavePosition, Show},
     event::{KeyCode, KeyEvent, KeyModifiers},
-    execute,
+    execute, queue
 };
 
 use std::path::PathBuf;
@@ -28,6 +28,7 @@ struct FTab {
 pub struct Editor {
     tabs: Vec<FTab>,
     current: usize,
+    area: Rect,
 }
 
 impl Default for Editor {
@@ -42,6 +43,7 @@ impl Default for Editor {
                 cursor: (0, 0),
             }],
             current: 0,
+            area: Rect::default(),
         }
     }
 }
@@ -49,6 +51,7 @@ impl Default for Editor {
 impl Editor {
     pub fn handle_event(&mut self, event: KeyEvent) {
         let line = self.tabs[self.current].line;
+        let (x, y) = self.tabs[self.current].cursor;
         match event {
             KeyEvent {
                 code: KeyCode::Backspace,
@@ -59,8 +62,14 @@ impl Editor {
                 {
                     self.tabs[self.current].buffer.remove(line);
                     self.tabs[self.current].line -= 1;
+                    self.tabs[self.current].cursor.0 = 
+                        self.tabs[self.current].buffer[line-1].len() as u16;
+                    self.tabs[self.current].cursor.1 = line as u16 - 1;
                 } else if self.tabs[self.current].buffer[line].len() > 0 {
-                    self.tabs[self.current].buffer[line].pop();
+                    self.tabs[self.current].buffer[line].remove(
+                            x as usize - 1
+                        );
+                    self.tabs[self.current].cursor.0 -= 1;
                 }
             }
             KeyEvent {
@@ -70,12 +79,17 @@ impl Editor {
                 self.tabs[self.current]
                     .buffer
                     .insert(line + 1, String::new());
-                self.tabs[self.current].line += 1
+                self.tabs[self.current].line += 1;
+                self.tabs[self.current].cursor.1 += 1;
+                self.tabs[self.current].cursor.0 = 0;
             }
             KeyEvent {
                 code: KeyCode::Char(c),
                 modifiers: KeyModifiers::NONE,
-            } => self.tabs[self.current].buffer[line].push(c),
+            } => {
+                self.tabs[self.current].buffer[y as usize].insert(x as usize, c);
+                self.tabs[self.current].cursor.0 += 1;               
+            }
             KeyEvent {
                 code: KeyCode::Left,
                 modifiers: KeyModifiers::NONE,
@@ -92,33 +106,54 @@ impl Editor {
                     < self.tabs[self.current].buffer[line].len() as u16
                 {
                     self.tabs[self.current].cursor.0 += 1;
+                } 
+            }
+            KeyEvent { 
+                code: KeyCode::Up,
+                modifiers: KeyModifiers::NONE,
+            } => {
+                if self.tabs[self.current].cursor.1 > 0 {
+                    self.tabs[self.current].cursor.1 -= 1;
+                    self.tabs[self.current].line -= 1;
+                    if x > self.tabs[self.current].buffer[line - 1].len() as u16 {
+                        self.tabs[self.current].cursor.0 = 
+                            self.tabs[self.current].buffer[line - 1].len() as u16;
+                    }
                 }
-                execute!(
-                    stdout(),
-                    Show,
-                    MoveTo(
-                        self.tabs[self.current].cursor.0,
-                        self.tabs[self.current].cursor.1
-                    )
-                )
-                .unwrap();
+            }
+            KeyEvent { 
+                code: KeyCode::Down,
+                modifiers: KeyModifiers::NONE
+            } => {
+                if self.tabs[self.current].cursor.1
+                    < self.tabs[self.current].buffer[line].len() as u16 {
+                        self.tabs[self.current].line += 1;
+                        self.tabs[self.current].cursor.1 += 1;
+                        if x > self.tabs[self.current].buffer[line + 1].len() as u16 {
+                            self.tabs[self.current].cursor.0 = 
+                                self.tabs[self.current].buffer[line + 1].len() as u16;
+                        }
+                    }
             }
             _ => {}
         }
+        let (x, y) = self.tabs[self.current].cursor;
+        debug!("x: {}, y: {}", x, y);
+        execute!(stdout(), MoveTo(self.tabs[self.current].cursor.0 + self.area.left(), 
+            self.tabs[self.current].cursor.1 + self.area.top()))
+        .unwrap();
     }
 }
 
 impl Widget for Editor {
     fn render(self, area: Rect, buf: &mut Buffer) {
-        let (x, y) = self.tabs[self.current].cursor;
         for i in 0..self.tabs[self.current].buffer.len() {
             buf.set_string(
                 area.left(),
                 area.top() + i as u16,
                 self.tabs[self.current].buffer[i].clone(),
                 Style::default(),
-            );
-        }
-        execute!(stdout(), MoveTo(5 + area.left(), 5 + area.top()), Show).unwrap();
+            ) 
+        } 
     }
 }
