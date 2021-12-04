@@ -1,16 +1,18 @@
 use std::io::stdout;
 use tui::{
+    backend::Backend,
     buffer::Buffer,
     layout::{Constraint, Direction, Layout, Rect},
     style::{Modifier, Style},
     text::{Span, Spans},
-    widgets::{Block, Borders, List, ListItem, ListState, Widget},
+    widgets::{Block, Borders, List, ListItem, ListState, Widget}, 
+    Terminal,
 };
 
 use crossterm::{
     cursor::{Hide, MoveTo, RestorePosition, SavePosition, Show},
     event::{KeyCode, KeyEvent, KeyModifiers},
-    execute, queue
+    execute,
 };
 
 use std::path::PathBuf;
@@ -28,7 +30,6 @@ struct FTab {
 pub struct Editor {
     tabs: Vec<FTab>,
     current: usize,
-    area: Rect,
 }
 
 impl Default for Editor {
@@ -137,11 +138,11 @@ impl Editor {
             }
             _ => {}
         }
-        let (x, y) = self.tabs[self.current].cursor;
-        debug!("x: {}, y: {}", x, y);
-        execute!(stdout(), MoveTo(self.tabs[self.current].cursor.0 + self.area.left(), 
-            self.tabs[self.current].cursor.1 + self.area.top()))
-        .unwrap();
+    }
+
+    pub fn get_pos(&self) -> (u16, u16) {
+        (self.tabs[self.current].cursor.0 + self.area.left(),
+            self.tabs[self.current].cursor.1 + self.area.top())
     }
 }
 
@@ -154,6 +155,6 @@ impl Widget for Editor {
                 self.tabs[self.current].buffer[i].clone(),
                 Style::default(),
             ) 
-        } 
+        }
     }
 }

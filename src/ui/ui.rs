@@ -108,6 +108,8 @@ impl UI {
                     break;
                 }
             }
+            let (x, y) = self.editor.get_pos();
+            terminal.set_cursor(x, y).unwrap();
             terminal.show_cursor().unwrap();
         }
     }
