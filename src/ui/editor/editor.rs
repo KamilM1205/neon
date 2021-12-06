@@ -1,19 +1,11 @@
-use std::io::stdout;
 use tui::{
-    backend::Backend,
     buffer::Buffer,
-    layout::{Constraint, Direction, Layout, Rect},
-    style::{Modifier, Style},
-    text::{Span, Spans},
-    widgets::{Block, Borders, List, ListItem, ListState, Widget}, 
-    Terminal,
+    layout::Rect,
+    style::Style,
+    widgets::Widget, 
 };
 
-use crossterm::{
-    cursor::{Hide, MoveTo, RestorePosition, SavePosition, Show},
-    event::{KeyCode, KeyEvent, KeyModifiers},
-    execute,
-};
+use crossterm::event::{KeyCode, KeyEvent, KeyModifiers};
 
 use std::path::PathBuf;
 
@@ -24,17 +16,21 @@ struct FTab {
     buffer: Vec<String>,
     line: usize,
     cursor: (u16, u16),
+    offset: usize,
 }
 
 #[derive(Clone)]
 pub struct Editor {
     tabs: Vec<FTab>,
     current: usize,
+    x_offset: u16,
+    y_offset: u16,
+    x_max: u16,
+    y_max: u16,
 }
 
 impl Default for Editor {
     fn default() -> Self {
-        execute!(stdout(), Show).unwrap();
         Self {
             tabs: vec![FTab {
                 title: "untitled",
@@ -42,9 +38,13 @@ impl Default for Editor {
                 buffer: vec![String::new()],
                 line: 0,
                 cursor: (0, 0),
+                offset: 0,
             }],
             current: 0,
-            area: Rect::default(),
+            x_offset: 0,
+            y_offset: 0,
+            x_max: 0,
+            y_max: 0,
         }
     }
 }
@@ -134,22 +134,30 @@ impl Editor {
                             self.tabs[self.current].cursor.0 = 
                                 self.tabs[self.current].buffer[line + 1].len() as u16;
                         }
-                    }
+                    } //else if self.tabs[self.current].offset
             }
             _ => {}
         }
     }
 
+    pub fn update_area(&mut self, x: u16, y: u16, x_max: u16, y_max: u16) {
+        self.x_offset = x;
+        self.y_offset = y;
+        self.x_max = x_max;
+        self.y_max = y_max;
+    }
+
     pub fn get_pos(&self) -> (u16, u16) {
-        (self.tabs[self.current].cursor.0 + self.area.left(),
-            self.tabs[self.current].cursor.1 + self.area.top())
+        (self.tabs[self.current].cursor.0 + self.x_offset,
+            self.tabs[self.current].cursor.1 + self.y_offset)
     }
 }
 
 impl Widget for Editor {
     fn render(self, area: Rect, buf: &mut Buffer) {
-        for i in 0..self.tabs[self.current].buffer.len() {
-            buf.set_string(
+        for i in 
+            self.tabs[self.current].offset..self.tabs[self.current].buffer.len() {
+                buf.set_string(
                 area.left(),
                 area.top() + i as u16,
                 self.tabs[self.current].buffer[i].clone(),

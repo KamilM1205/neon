@@ -88,7 +88,6 @@ impl UI {
                 }
                 UISTATE::Input(event) => {
                     self.handle_ui_input(event);
-                    std::thread::sleep(std::time::Duration::from_millis(30));
                     terminal
                         .draw(|f| {
                             self.draw_ui(f);
@@ -108,9 +107,13 @@ impl UI {
                     break;
                 }
             }
-            let (x, y) = self.editor.get_pos();
-            terminal.set_cursor(x, y).unwrap();
-            terminal.show_cursor().unwrap();
+            if let State::Editor = self.state {
+                let (x, y) = self.editor.get_pos();
+                terminal.set_cursor(x, y).unwrap();
+                terminal.show_cursor().unwrap();
+            } else {
+                terminal.hide_cursor().unwrap();
+            }
         }
     }
 
@@ -145,6 +148,8 @@ impl UI {
             .split(vchunks[0]);
         let mut state = self.fmanager.get_state();
         f.render_stateful_widget(self.fmanager.clone(), hchunks[0], &mut state);
+        self.editor.update_area(hchunks[1].left(), hchunks[1].top(), 
+                                hchunks[1].right(), hchunks[1].bottom());
         f.render_widget(self.editor.clone(), hchunks[1]);
     }
 }
