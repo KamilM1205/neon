@@ -1,12 +1,9 @@
-use tui::{
-    buffer::Buffer,
-    layout::{Constraint, Direction, Layout, Rect},
-    style::{Modifier, Style},
-    text::{Span, Spans},
-    widgets::{Block, Borders, List, ListItem, ListState, StatefulWidget},
-};
-
-use crossterm::event::{KeyCode, KeyEvent, KeyModifiers};
+use crossterm::event::{KeyEvent, KeyModifiers, KeyCode};
+use ratatui::buffer::Buffer;
+use ratatui::layout::{Direction, Layout, Rect, Constraint};
+use ratatui::style::{Style, Modifier};
+use ratatui::text::{Span, Line};
+use ratatui::widgets::{ListItem, ListState, StatefulWidget, List, Borders, Block};
 
 use crate::config::theme::FileManager;
 use crate::ui::file_tree::file_adapter::{FileAdapter, FileType};
@@ -69,6 +66,7 @@ impl FileTree {
         if let KeyEvent {
             modifiers: KeyModifiers::CONTROL,
             code: KeyCode::Char('a'),
+            ..
         } = event
         {
             self.menu.change_visiblity();
@@ -79,14 +77,17 @@ impl FileTree {
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Up,
+                    ..
                 } => self.pervious(),
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Down,
+                    ..
                 } => self.next(),
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Enter,
+                    ..
                 } => self.select(),
                 _ => (),
             }
@@ -130,16 +131,16 @@ impl StatefulWidget for FileTree {
             .files
             .iter()
             .map(|i| {
-                let mut lines: Vec<Spans> = Vec::new();
-                lines.push(Spans::from(Span::styled(
+                let mut lines: Vec<Span> = Vec::new();
+                lines.push(Span::styled(
                     i.name.clone(),
                     match i.ftype {
                         FileType::Up => Style::default().fg(self.theme.file),
                         FileType::Folder => Style::default().fg(self.theme.folder),
                         FileType::File => Style::default().fg(self.theme.file),
                     },
-                )));
-                ListItem::new(lines)
+                ));
+                ListItem::new(Line::from(lines))
                     .style(Style::default().fg(self.theme.select).bg(self.theme.back))
             })
             .collect();

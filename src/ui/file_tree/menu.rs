@@ -1,12 +1,5 @@
-use tui::{
-    buffer::Buffer,
-    layout::{Constraint, Direction, Layout, Rect},
-    style::{Modifier, Style},
-    text::{Span, Spans},
-    widgets::{Block, Borders, List, ListItem, ListState, Paragraph, StatefulWidget, Widget},
-};
-
-use crossterm::event::{KeyCode, KeyEvent, KeyModifiers};
+use crossterm::event::{KeyEvent, KeyModifiers, KeyCode};
+use ratatui::{widgets::{StatefulWidget, ListItem, List, Block, Borders, Paragraph, ListState, Widget}, layout::{Rect, Direction, Layout, Constraint}, buffer::Buffer, text::{Span, Line}, style::{Modifier, Style}};
 
 use crate::config::theme::FileManager;
 
@@ -114,14 +107,17 @@ impl Menu {
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Up,
+                    ..
                 } => self.pervious(),
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Down,
+                    ..
                 } => self.next(),
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Enter,
+                    ..
                 } => self.select(),
                 _ => (),
             }
@@ -130,6 +126,7 @@ impl Menu {
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Esc,
+                    ..
                 } => {
                     self.state = MenuState::Select(0);
                     return;
@@ -137,6 +134,7 @@ impl Menu {
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Enter,
+                    ..
                 } => {
                     self.state = MenuState::Select(0);
                     self.new_object(e.clone());
@@ -145,12 +143,14 @@ impl Menu {
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Backspace,
+                    ..
                 } => {
                     e.pop();
                 }
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Char(c),
+                    ..
                 } => e.push(c),
                 _ => (),
             }
@@ -160,6 +160,7 @@ impl Menu {
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Esc,
+                    ..
                 } => {
                     self.state = MenuState::Select(0);
                     return;
@@ -167,6 +168,7 @@ impl Menu {
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Enter,
+                    ..
                 } => {
                     self.state = MenuState::Select(1);
                     self.move_object(e.clone());
@@ -175,12 +177,14 @@ impl Menu {
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Backspace,
+                    ..
                 } => {
                     e.pop();
                 }
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Char(c),
+                    ..
                 } => e.push(c),
                 _ => (),
             }
@@ -190,6 +194,7 @@ impl Menu {
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Esc,
+                    ..
                 } => {
                     self.state = MenuState::Select(0);
                     return;
@@ -197,6 +202,7 @@ impl Menu {
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Enter,
+                    ..
                 } => {
                     self.state = MenuState::Select(2);
                     self.delete_object(e.clone());
@@ -205,12 +211,14 @@ impl Menu {
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Backspace,
+                    ..
                 } => {
                     e.pop();
                 }
                 KeyEvent {
                     modifiers: KeyModifiers::NONE,
                     code: KeyCode::Char(c),
+                    ..
                 } => e.push(c),
                 _ => (),
             }
@@ -250,9 +258,9 @@ impl StatefulWidget for Menu {
             .items
             .iter()
             .map(|i| {
-                let mut lines: Vec<Spans> = Vec::new();
-                lines.push(Spans::from(Span::styled(i, Style::default().fg(self.theme.file))));
-                ListItem::new(lines)
+                let mut lines: Vec<Span> = Vec::new();
+                lines.push(Span::styled(i, Style::default().fg(self.theme.file)));
+                ListItem::new(Line::from(lines))
                     .style(Style::default().fg(self.theme.select).bg(self.theme.back))
             })
             .collect();

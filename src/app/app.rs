@@ -1,4 +1,4 @@
-use crossterm::event::{KeyCode, KeyEvent, KeyModifiers};
+use crossterm::event::{KeyEvent, KeyModifiers, KeyCode};
 
 use crate::app::event::{EventHandler, EventType};
 //use crate::app::state::AppState;
@@ -39,6 +39,7 @@ impl App {
                     KeyEvent {
                         modifiers: KeyModifiers::CONTROL,
                         code: KeyCode::Char('q'),
+                        ..
                     } => {
                         ui_tx.send(UISTATE::Quit).unwrap();
                         break;

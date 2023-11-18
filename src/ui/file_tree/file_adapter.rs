@@ -64,11 +64,11 @@ impl FileAdapter {
         let mut files: Vec<File> = Vec::new();
         let mut dirs: Vec<File> = Vec::new();
 
-        for i in self.files.iter() {
-            match i.ftype {
-                FileType::Up => dirs.push(i.clone()),
-                FileType::Folder => dirs.push(i.clone()),
-                FileType::File => files.push(i.clone()),
+        for file in self.files.iter() {
+            match file.ftype {
+                FileType::Up => dirs.push(file.clone()),
+                FileType::Folder => dirs.push(file.clone()),
+                FileType::File => files.push(file.clone()),
             }
         }
         files.sort_by(|a, b| a.name.cmp(&b.name));

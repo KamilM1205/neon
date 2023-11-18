@@ -1,5 +1,4 @@
-use tui::{
-    backend::Backend,
+use ratatui::{
     backend::CrosstermBackend,
     layout::{Constraint, Direction, Layout},
     Frame, Terminal,
@@ -119,10 +118,11 @@ impl UI {
 
     fn update_ui_data(&mut self) {}
 
-    fn handle_ui_input(&mut self, event: crossterm::event::KeyEvent) {
+    fn handle_ui_input(&mut self, event: KeyEvent) {
         if let KeyEvent {
             modifiers: KeyModifiers::CONTROL,
             code: KeyCode::Char('w'),
+            ..
         } = event
         {
             self.state = if self.state == State::Editor {
@@ -137,7 +137,7 @@ impl UI {
         }
     }
 
-    fn draw_ui<'b, B: Backend>(&mut self, f: &mut Frame<B>) {
+    fn draw_ui<'b>(&mut self, f: &mut Frame) {
         let vchunks = Layout::default()
             .direction(Direction::Vertical)
             .constraints([Constraint::Percentage(95)].as_ref())

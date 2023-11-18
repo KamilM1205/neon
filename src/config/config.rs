@@ -2,9 +2,9 @@ use serde::{Deserialize, Serialize};
 
 use crate::config::theme::{Theme, ThemeError};
 
-#[derive(Copy, Clone, Deserialize, Serialize)]
-pub struct ConfigFile<'a> {
-    theme: Option<&'a str>,
+#[derive(Clone, Deserialize, Serialize)]
+pub struct ConfigFile {
+    theme: Option<Box<str>>,
     plugin_use: Option<bool>,
 }
 
@@ -18,7 +18,7 @@ impl<'a> Config {
         use std::fs;
         use std::path;
         let path = path::PathBuf::from(path);
-        let data: String;
+        let data;
         if path.exists() {
             data = fs::read_to_string(path).unwrap();
         } else {
@@ -30,13 +30,12 @@ impl<'a> Config {
             .unwrap();
             fs::write(&path, data.clone()).unwrap();
         }
-        let c = std::borrow::Cow::from(data);
-        let decoded: ConfigFile = toml::from_str(&c).unwrap();
+        
+        let decoded: ConfigFile = toml::from_str(&data).unwrap();
         let theme = match Theme::load(&decoded.theme.unwrap()) {
             Ok(t) => t,
             Err(e) => panic!("{}", e),
         };
-        drop(decoded);
         Ok(Self { theme })
     }
 }

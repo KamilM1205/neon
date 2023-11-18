@@ -1,4 +1,4 @@
-use tui::{
+use ratatui::{
     buffer::Buffer,
     layout::Rect,
     style::Style,
@@ -57,6 +57,7 @@ impl Editor {
             KeyEvent {
                 code: KeyCode::Backspace,
                 modifiers: KeyModifiers::NONE,
+                ..
             } => {
                 if self.tabs[self.current].buffer[self.tabs[self.current].line].len() == 0
                     && self.tabs[self.current].line > 0
@@ -76,6 +77,7 @@ impl Editor {
             KeyEvent {
                 code: KeyCode::Enter,
                 modifiers: KeyModifiers::NONE,
+                ..
             } => {
                 self.tabs[self.current]
                     .buffer
@@ -87,6 +89,7 @@ impl Editor {
             KeyEvent {
                 code: KeyCode::Char(c),
                 modifiers: KeyModifiers::NONE,
+                ..
             } => {
                 self.tabs[self.current].buffer[y as usize].insert(x as usize, c);
                 self.tabs[self.current].cursor.0 += 1;               
@@ -94,6 +97,7 @@ impl Editor {
             KeyEvent {
                 code: KeyCode::Left,
                 modifiers: KeyModifiers::NONE,
+                ..
             } => {
                 if self.tabs[self.current].cursor.0 > 0 {
                     self.tabs[self.current].cursor.0 -= 1
@@ -102,6 +106,7 @@ impl Editor {
             KeyEvent {
                 code: KeyCode::Right,
                 modifiers: KeyModifiers::NONE,
+                ..
             } => {
                 if self.tabs[self.current].cursor.0
                     < self.tabs[self.current].buffer[line].len() as u16
@@ -112,6 +117,7 @@ impl Editor {
             KeyEvent { 
                 code: KeyCode::Up,
                 modifiers: KeyModifiers::NONE,
+                ..
             } => {
                 if self.tabs[self.current].cursor.1 > 0 {
                     self.tabs[self.current].cursor.1 -= 1;
@@ -124,7 +130,8 @@ impl Editor {
             }
             KeyEvent { 
                 code: KeyCode::Down,
-                modifiers: KeyModifiers::NONE
+                modifiers: KeyModifiers::NONE,
+                ..
             } => {
                 if self.tabs[self.current].cursor.1
                     < self.tabs[self.current].buffer[line].len() as u16 {

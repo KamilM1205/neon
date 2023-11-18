@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use tui::style::Color;
+use ratatui::style::Color;
 
 #[derive(Clone, Deserialize, Serialize)]
 pub struct ThemeFile {
